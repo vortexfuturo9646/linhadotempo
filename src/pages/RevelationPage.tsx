@@ -208,7 +208,7 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
                 
                 <div className="bg-white/5 rounded-lg p-3 border border-violet-400/20">
                   <p className="text-purple-100 text-sm leading-tight text-center">
-                    Para desbloquear essa leitura, é necessário um sinal simbólico de <span className="text-amber-300 font-medium">R$14,90</span> — que representa seu aceite espiritual e ativa o canal de revelação completa.
+                    Para desbloquear essa leitura, é necessário um sinal simbólico de <span className="text-amber-300 font-medium">R$19,90</span> — que representa seu aceite espiritual e ativa o canal de revelação completa.
                   </p>
                 </div>
               </div>

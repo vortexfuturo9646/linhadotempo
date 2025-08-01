@@ -327,7 +327,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
 
               <div className="bg-gradient-to-r from-violet-500/20 to-purple-600/20 rounded-lg p-2 backdrop-blur-sm border border-violet-400/30">
                 <p className="text-purple-100 text-center text-xs leading-tight">
-                  🌀 Essa liberação energética tem um custo simbólico de conexão: <span className="text-amber-300 font-medium">R$ 14,90</span>
+                  🌀 Essa liberação energética tem um custo simbólico de conexão: <span className="text-amber-300 font-medium">R$ 19,90</span>
                 </p>
                 <p className="text-purple-200 text-center text-xs italic mt-1">
                   (Somente enquanto o campo estiver aberto neste ciclo espiritual)
@@ -379,7 +379,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
 
               <div className="bg-gradient-to-r from-violet-500/20 to-purple-600/20 rounded-lg p-2 backdrop-blur-sm border border-violet-400/30">
                 <p className="text-purple-100 text-center text-xs leading-tight">
-                  🌀 Essa liberação energética tem um custo simbólico de conexão: <span className="text-amber-300 font-medium">R$ 14,90</span>
+                  🌀 Essa liberação energética tem um custo simbólico de conexão: <span className="text-amber-300 font-medium">R$ 19,90</span>
                 </p>
                 <p className="text-purple-200 text-center text-xs italic mt-1">
                   (Somente enquanto o campo estiver aberto neste ciclo espiritual)
