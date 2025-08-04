@@ -341,10 +341,10 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             </div>
 
             <button
-              onClick={() => window.open('https://go.pepperpay.com.br/voctn', '_blank')}
-              className="w-full p-2.5 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-violet-400/50 animate-pulse text-xs"
+              onClick={() => window.open('https://wa.me/554488286759?text=Oi%2C+acabei+de+liberar+minha+Linha+Espiritual+e+quero+receber+a+leitura+completa.', '_blank')}
+              className="w-full p-2.5 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-green-400/50 animate-pulse text-xs"
             >
-              ✨ Liberar Minha Revelação Completa
+              📱 Ativar Leitura Completa no WhatsApp
             </button>
 
             <div className="text-center">
@@ -393,10 +393,10 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             </div>
 
             <button
-              onClick={() => window.open('https://go.pepperpay.com.br/voctn', '_blank')}
-              className="w-full p-2.5 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-violet-400/50 animate-pulse text-xs"
+              onClick={() => window.open('https://wa.me/554488286759?text=Oi%2C+acabei+de+liberar+minha+Linha+Espiritual+e+quero+receber+a+leitura+completa.', '_blank')}
+              className="w-full p-2.5 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-green-400/50 animate-pulse text-xs"
             >
-              ✨ Liberar Minha Revelação Completa
+              📱 Ativar Leitura Completa no WhatsApp
             </button>
 
             <div className="text-center">

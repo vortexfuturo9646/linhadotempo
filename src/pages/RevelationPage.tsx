@@ -229,10 +229,10 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
 
             {/* Botão Final */}
             <button
-              onClick={() => window.open('https://go.pepperpay.com.br/voctn', '_blank')}
-              className="w-full py-3 px-4 bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-red-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-red-400/50 animate-pulse"
+              onClick={() => window.open('https://wa.me/554488286759?text=Oi%2C+acabei+de+liberar+minha+Linha+Espiritual+e+quero+receber+a+leitura+completa.', '_blank')}
+              className="w-full py-3 px-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-green-400/50 animate-pulse"
             >
-              🔓 Liberar Minha Revelação Final
+              📱 Ativar Leitura Completa no WhatsApp
             </button>
 
             <div className="text-center">
