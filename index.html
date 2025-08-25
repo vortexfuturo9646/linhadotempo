@@ -37,61 +37,50 @@
       fbq('track', 'PageView');
     </script>
 
-    <!-- ===================== -->
-    <!-- EVENTOS PERSONALIZADOS (GA4 + PIXEL) -->
-    <!-- ===================== -->
+    <!-- EVENTOS PERSONALIZADOS -->
     <script>
-      // 🔹 ETAPA 1 - Seleção do mês
       function etapa1(mes) {
-        gtag('event', 'etapa_1_mes', {'event_category':'funil','mes': mes});
+        gtag('event', 'etapa_1_mes', {'mes': mes});
         fbq('trackCustom', 'Etapa_1_Mes', {mes: mes});
       }
 
-      // 🔹 ETAPA 2 - Seleção do dia
       function etapa2(dia) {
-        gtag('event', 'etapa_2_dia', {'event_category':'funil','dia': dia});
+        gtag('event', 'etapa_2_dia', {'dia': dia});
         fbq('trackCustom', 'Etapa_2_Dia', {dia: dia});
       }
 
-      // 🔹 ETAPA 3 - Seleção da década
       function etapa3(decada) {
-        gtag('event', 'etapa_3_decada', {'event_category':'funil','decada': decada});
+        gtag('event', 'etapa_3_decada', {'decada': decada});
         fbq('trackCustom', 'Etapa_3_Decada', {decada: decada});
       }
 
-      // 🔹 ETAPA 4 - Seleção do ano
       function etapa4(ano) {
-        gtag('event', 'etapa_4_ano', {'event_category':'funil','ano': ano});
+        gtag('event', 'etapa_4_ano', {'ano': ano});
         fbq('trackCustom', 'Etapa_4_Ano', {ano: ano});
       }
 
-      // 🔹 ETAPA 5 - Inserção do nome
       function etapa5(nome) {
-        gtag('event', 'etapa_5_nome', {'event_category':'funil','nome': nome});
+        gtag('event', 'etapa_5_nome', {'nome': nome});
         fbq('trackCustom', 'Etapa_5_Nome', {nome: nome});
       }
 
-      // 🔹 ETAPA 6 - Primeira revelação (Prosseguir)
       function etapa6() {
-        gtag('event', 'etapa_6_revelacao', {'event_category':'funil','acao':'prosseguir'});
+        gtag('event', 'etapa_6_revelacao', {'acao':'prosseguir'});
         fbq('trackCustom', 'Etapa_6_Revelacao', {acao: 'prosseguir'});
       }
 
-      // 🔹 ETAPA 7 - Tela de oferta (Liberar revelação)
       function etapa7() {
-        gtag('event', 'etapa_7_oferta', {'event_category':'funil','acao':'botao_oferta'});
+        gtag('event', 'etapa_7_oferta', {'acao':'botao_oferta'});
         fbq('trackCustom', 'Etapa_7_Oferta', {acao: 'botao_oferta'});
       }
 
-      // 🔹 ETAPA 8 - Checkout (início do pagamento)
       function etapa8() {
-        gtag('event', 'etapa_8_checkout', {'event_category':'funil','acao':'checkout_iniciado'});
+        gtag('event', 'etapa_8_checkout', {'acao':'checkout_iniciado'});
         fbq('track', 'InitiateCheckout');
       }
 
-      // (Opcional) Compra concluída
       function compra(valor) {
-        gtag('event', 'purchase', {'event_category':'funil','value': valor, 'currency': 'BRL'});
+        gtag('event', 'purchase', {'value': valor, 'currency': 'BRL'});
         fbq('track', 'Purchase', {value: valor, currency: 'BRL'});
       }
     </script>
