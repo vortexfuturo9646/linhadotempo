@@ -80,11 +80,14 @@ const SpiritualAmbientSound: React.FC<SpiritualAmbientSoundProps> = ({
         playsInline
         muted={false}
       >
-        {/* Frequência 432Hz - Harmonia Natural */}
-        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg" />
+        {/* 432Hz MÚSICA PARA DORMIR PARA ABRIR, CURAR E FORTALECER TODOS OS CHAKRAS */}
+        <source src="/sounds/432hz-chakra-healing-sleep-music.mp3" type="audio/mpeg" />
         
-        {/* Frequência 528Hz - Amor e Cura */}
-        <source src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-one/zapsplat_nature_wind_gentle_breeze_through_trees_001_24004.mp3" type="audio/mpeg" />
+        {/* Backup - Frequência 432Hz genérica */}
+        <source src="/sounds/frequency-432hz-tibetan-bowls.mp3" type="audio/mpeg" />
+        
+        {/* Backup - Frequência espiritual */}
+        <source src="/sounds/spiritual-frequency.mp3" type="audio/mpeg" />
         
         {/* Fallback - Som de sino tibetano */}
         <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav" />
