@@ -156,12 +156,24 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
           <div className="space-y-6">
             {/* Título Principal */}
             <div className="text-center">
+              <div className="mb-2">
+                <p className="text-purple-200 text-xs font-medium">
+                  ✨ Etapa 6 de 8 desbloqueada...
+                </p>
+              </div>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-violet-400/20 rounded-full blur-xl"></div>
                 <h1 className="relative text-lg md:text-xl font-bold text-amber-300 mb-2">
                   🌟 Primeira Revelação
                 </h1>
               </div>
+            </div>
+
+            {/* Reforço de Autoridade */}
+            <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 rounded-lg p-3 border border-amber-400/30">
+              <p className="text-amber-100 text-center text-sm font-medium">
+                ⚡ Revelação calculada por alinhamento energético e numerologia sagrada.
+              </p>
             </div>
 
             {/* Texto Canalizado */}
@@ -204,6 +216,11 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
           <div className="space-y-6">
             {/* Título Principal */}
             <div className="text-center">
+              <div className="mb-2">
+                <p className="text-purple-200 text-xs font-medium">
+                  ✨ Etapa 7 de 8 desbloqueada...
+                </p>
+              </div>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-red-400/20 to-orange-400/20 rounded-full blur-xl"></div>
                 <h1 className="relative text-lg md:text-xl font-bold text-amber-300 mb-2">
@@ -226,6 +243,12 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
                     ⚠️ Muitas pessoas deixam esse momento passar e continuam presas nos mesmos ciclos negativos.
                   </p>
                 </div>
+                
+                <div className="bg-white/5 rounded-lg p-3 border border-violet-400/20">
+                  <p className="text-purple-100 text-sm leading-tight text-center">
+                    Ao liberar sua revelação, você receberá instruções claras para alinhar amor, prosperidade e equilíbrio ainda em 2025.
+                  </p>
+                </div>
               </div>
                 <div className="bg-gradient-to-r from-violet-500/20 to-purple-600/20 rounded-lg p-3 backdrop-blur-sm border border-violet-400/30">
                   <p className="text-purple-100 text-sm leading-tight text-center">
@@ -239,7 +262,7 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
               <p className="text-amber-100 font-medium text-sm mb-2">⏳ Seu canal espiritual se fecha em:</p>
               <CountdownTimer initialMinutes={10} />
               <p className="text-amber-100 text-xs mt-2">
-                Você está a um passo de destravar sua Linha do Tempo Espiritual.
+                Finalize agora — seu canal espiritual só ficará aberto por alguns minutos.
               </p>
             </div>
 

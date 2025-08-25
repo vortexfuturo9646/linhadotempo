@@ -47,6 +47,8 @@ interface OraclePageProps {
 
 const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
   const [step, setStep] = useState(1);
+  const [showValidation, setShowValidation] = useState(false);
+  const [validationText, setValidationText] = useState('');
   const [selectedMonth, setSelectedMonth] = useState<string>('');
   const [selectedDay, setSelectedDay] = useState<number | null>(null);
   const [selectedDecade, setSelectedDecade] = useState<number | null>(null);
@@ -67,7 +69,16 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
     return Array.from({ length: 10 }, (_, i) => decade + i);
   };
 
+  const showMicroValidation = (text: string) => {
+    setValidationText(text);
+    setShowValidation(true);
+    setTimeout(() => {
+      handleContinue();
+    }, 2000);
+  };
+
   const handleContinue = () => {
+    setShowValidation(false);
     if (step < 7) {
       setStep(step + 1);
       if (step === 6) {
@@ -81,6 +92,13 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
       case 1:
         return (
           <div className="space-y-8">
+            {/* Indicador de Progresso */}
+            <div className="text-center">
+              <p className="text-purple-200 text-xs font-medium">
+                ✨ Etapa 1 de 8 desbloqueada...
+              </p>
+            </div>
+
             <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
               <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-xs border border-amber-400/30 shadow-lg">
                 ETAPA 1 - SEU MÊS DE NASCIMENTO
@@ -90,6 +108,15 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                 O mês em que você nasceu não foi por acaso — ele abre o portal inicial da sua energia espiritual. Escolha abaixo e descubra como isso marcou seu destino.
               </p>
             </div>
+
+            {/* Micro-validação */}
+            {showValidation && (
+              <div className="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg p-3 border border-emerald-400/30 animate-fade-in">
+                <p className="text-emerald-200 text-center text-xs font-medium">
+                  {validationText}
+                </p>
+              </div>
+            )}
 
             <div className="grid grid-cols-3 gap-1.5">
               {months.map((month) => (
@@ -102,7 +129,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                     if (typeof window !== 'undefined' && (window as any).etapa1) {
                       (window as any).etapa1(month);
                     }
-                    handleContinue();
+                    showMicroValidation('🔮 Sua escolha foi registrada. Esse portal carrega uma vibração única que influencia seu destino.');
                   }}
                   isSelected={selectedMonth === month}
                 />
@@ -114,6 +141,13 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
       case 2:
         return (
           <div className="space-y-6">
+            {/* Indicador de Progresso */}
+            <div className="text-center">
+              <p className="text-purple-200 text-xs font-medium">
+                ✨ Etapa 2 de 8 desbloqueada...
+              </p>
+            </div>
+
             <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
               <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-xs border border-amber-400/30 shadow-lg">
                 ETAPA 2 - SEU DIA DE NASCIMENTO
@@ -123,6 +157,15 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                 O dia exato em que você chegou ao mundo define o seu número de vibração, responsável por atrair ou bloquear oportunidades. Selecione o seu dia e veja qual vibração você carrega.
               </p>
             </div>
+
+            {/* Micro-validação */}
+            {showValidation && (
+              <div className="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg p-3 border border-emerald-400/30 animate-fade-in">
+                <p className="text-emerald-200 text-center text-xs font-medium">
+                  {validationText}
+                </p>
+              </div>
+            )}
 
             <div className="grid grid-cols-7 gap-1">
               {days.map((day) => (
@@ -135,7 +178,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                     if (typeof window !== 'undefined' && (window as any).etapa2) {
                       (window as any).etapa2(day.toString().padStart(2, '0'));
                     }
-                    handleContinue();
+                    showMicroValidation('🔮 Número de vibração capturado. Essa frequência define como você atrai ou repele oportunidades.');
                   }}
                   isSelected={selectedDay === day}
                 />
@@ -147,6 +190,13 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
       case 3:
         return (
           <div className="space-y-6">
+            {/* Indicador de Progresso */}
+            <div className="text-center">
+              <p className="text-purple-200 text-xs font-medium">
+                ✨ Etapa 3 de 8 desbloqueada...
+              </p>
+            </div>
+
             <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
               <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-xs border border-amber-400/30 shadow-lg">
                 ETAPA 3 - SUA DÉCADA DE NASCIMENTO
@@ -156,6 +206,15 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                 Cada década tem uma missão espiritual. A sua mostra o início do seu ciclo terreno e influencia os desafios repetitivos que você enfrenta. Qual é a sua década?
               </p>
             </div>
+
+            {/* Micro-validação */}
+            {showValidation && (
+              <div className="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg p-3 border border-emerald-400/30 animate-fade-in">
+                <p className="text-emerald-200 text-center text-xs font-medium">
+                  {validationText}
+                </p>
+              </div>
+            )}
 
             <div className="grid grid-cols-2 gap-1.5">
               {decades.map((decade) => (
@@ -167,7 +226,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                     if (typeof window !== 'undefined' && (window as any).etapa3) {
                       (window as any).etapa3(decade.toString());
                     }
-                    handleContinue();
+                    showMicroValidation('🔮 Ciclo terreno identificado. Essa década carrega a missão espiritual que define seus desafios.');
                   }}
                   className={`p-2.5 rounded-lg backdrop-blur-sm transition-all duration-300 text-xs border ${
                     selectedDecade === decade
@@ -185,6 +244,13 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
       case 4:
         return (
           <div className="space-y-6">
+            {/* Indicador de Progresso */}
+            <div className="text-center">
+              <p className="text-purple-200 text-xs font-medium">
+                ✨ Etapa 4 de 8 desbloqueada...
+              </p>
+            </div>
+
             <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
               <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-xs border border-amber-400/30 shadow-lg">
                 ETAPA 4 - SEU ANO EXATO
@@ -194,6 +260,15 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                 O ano exato da sua chegada traz a chave do seu ponto de ruptura — quando sua energia começou a se desalinhar. Selecione para revelar.
               </p>
             </div>
+
+            {/* Micro-validação */}
+            {showValidation && (
+              <div className="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg p-3 border border-emerald-400/30 animate-fade-in">
+                <p className="text-emerald-200 text-center text-xs font-medium">
+                  {validationText}
+                </p>
+              </div>
+            )}
 
             <div className="grid grid-cols-5 gap-1">
               {selectedDecade && getYearsForDecade(selectedDecade).map((year) => (
@@ -205,7 +280,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                     if (typeof window !== 'undefined' && (window as any).etapa4) {
                       (window as any).etapa4(year.toString());
                     }
-                    handleContinue();
+                    showMicroValidation('🔮 Ponto de ruptura localizado. Esse ano marca quando sua energia começou a se desalinhar.');
                   }}
                   className={`p-1.5 rounded-lg backdrop-blur-sm transition-all duration-300 text-xs border ${
                     selectedYear === year
@@ -223,6 +298,13 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
       case 5:
         return (
           <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
+            {/* Indicador de Progresso */}
+            <div className="text-center">
+              <p className="text-purple-200 text-xs font-medium">
+                ✨ Etapa 5 de 8 desbloqueada...
+              </p>
+            </div>
+
             <div className="bg-white/5 rounded-lg p-2 mb-2 border border-violet-400/20">
               <h3 className="text-purple-100 text-center font-medium mb-2 text-xs">
                 Dados da Sua Consulta
@@ -327,10 +409,24 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
       case 7:
         return (
           <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
+            {/* Indicador de Progresso */}
+            <div className="text-center">
+              <p className="text-purple-200 text-xs font-medium">
+                ✨ Etapa 6 de 8 desbloqueada...
+              </p>
+            </div>
+
             <div className="text-center space-y-2">
               <h2 className="text-lg font-bold text-amber-300">
                 🔓 Primeira Revelação
               </h2>
+            </div>
+
+            {/* Reforço de Autoridade */}
+            <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 rounded-lg p-2 border border-amber-400/30">
+              <p className="text-amber-100 text-center text-xs font-medium">
+                ⚡ Revelação calculada por alinhamento energético e numerologia sagrada.
+              </p>
             </div>
 
             <div className="space-y-2">
@@ -368,6 +464,13 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
       case 8:
         return (
           <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
+            {/* Indicador de Progresso */}
+            <div className="text-center">
+              <p className="text-purple-200 text-xs font-medium">
+                ✨ Etapa 7 de 8 desbloqueada...
+              </p>
+            </div>
+
             <div className="text-center space-y-2">
               <h2 className="text-lg font-bold text-amber-300">
                 🔓 Liberar Minha Revelação
@@ -385,6 +488,12 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-lg p-3 backdrop-blur-sm border border-red-400/30">
                 <p className="text-red-100 text-center text-xs leading-tight">
                   ⚠️ Muitas pessoas deixam esse momento passar e continuam presas nos mesmos ciclos negativos. Por apenas <span className="text-amber-300 font-bold">R$19,90</span> você pode liberar tudo e finalmente entender como realinhar seu caminho.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg p-3 backdrop-blur-sm border border-emerald-400/30">
+                <p className="text-emerald-100 text-center text-xs leading-tight">
+                  Ao liberar sua revelação, você receberá instruções claras para alinhar amor, prosperidade e equilíbrio ainda em 2025.
                 </p>
               </div>
             </div>
