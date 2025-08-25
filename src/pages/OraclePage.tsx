@@ -98,6 +98,10 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                   month={month}
                   onClick={() => {
                     setSelectedMonth(month);
+                    // Tracking GA4 + Pixel
+                    if (typeof window !== 'undefined' && (window as any).etapa1) {
+                      (window as any).etapa1(month);
+                    }
                     handleContinue();
                   }}
                   isSelected={selectedMonth === month}
@@ -127,6 +131,10 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                   number={day.toString().padStart(2, '0')}
                   onClick={() => {
                     setSelectedDay(day);
+                    // Tracking GA4 + Pixel
+                    if (typeof window !== 'undefined' && (window as any).etapa2) {
+                      (window as any).etapa2(day.toString().padStart(2, '0'));
+                    }
                     handleContinue();
                   }}
                   isSelected={selectedDay === day}
@@ -155,6 +163,10 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                   key={decade}
                   onClick={() => {
                     setSelectedDecade(decade);
+                    // Tracking GA4 + Pixel
+                    if (typeof window !== 'undefined' && (window as any).etapa3) {
+                      (window as any).etapa3(decade.toString());
+                    }
                     handleContinue();
                   }}
                   className={`p-2.5 rounded-lg backdrop-blur-sm transition-all duration-300 text-xs border ${
@@ -189,6 +201,10 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                   key={year}
                   onClick={() => {
                     setSelectedYear(year);
+                    // Tracking GA4 + Pixel
+                    if (typeof window !== 'undefined' && (window as any).etapa4) {
+                      (window as any).etapa4(year.toString());
+                    }
                     handleContinue();
                   }}
                   className={`p-1.5 rounded-lg backdrop-blur-sm transition-all duration-300 text-xs border ${
@@ -254,6 +270,10 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               <button
                 onClick={() => {
                   if (name.trim()) {
+                    // Tracking GA4 + Pixel
+                    if (typeof window !== 'undefined' && (window as any).etapa5) {
+                      (window as any).etapa5(name.trim());
+                    }
                     const birthDate = `${selectedDay.toString().padStart(2, '0')}/${months.indexOf(selectedMonth) + 1}/${selectedYear}`;
                     const url = `/revelacao?nome=${encodeURIComponent(name.trim())}&data=${encodeURIComponent(birthDate)}`;
                     // Use internal navigation for instant transition
@@ -342,7 +362,13 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             </div>
 
             <button
-              onClick={() => window.open('https://wa.me/554488286759?text=Oi%2C+acabei+de+liberar+minha+Linha+Espiritual+e+quero+receber+a+leitura+completa.', '_blank')}
+              onClick={() => {
+                // Tracking GA4 + Pixel
+                if (typeof window !== 'undefined' && (window as any).etapa8) {
+                  (window as any).etapa8();
+                }
+                window.open('https://wa.me/554488286759?text=Oi%2C+acabei+de+liberar+minha+Linha+Espiritual+e+quero+receber+a+leitura+completa.', '_blank');
+              }}
               className="w-full p-2.5 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-green-400/50 animate-pulse text-xs"
             >
               📱 Ativar Leitura Completa no WhatsApp

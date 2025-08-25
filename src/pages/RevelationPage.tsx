@@ -138,6 +138,13 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
             <button
               onClick={handleContinue}
               className="w-full py-3 px-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-violet-400/50"
+              onClick={() => {
+                // Tracking GA4 + Pixel
+                if (typeof window !== 'undefined' && (window as any).etapa6) {
+                  (window as any).etapa6();
+                }
+                handleContinue();
+              }}
             >
               🔮 Começar Revelação
             </button>
@@ -179,6 +186,13 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
             <button
               onClick={handleContinue}
               className="w-full py-3 px-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-violet-400/50"
+              onClick={() => {
+                // Tracking GA4 + Pixel
+                if (typeof window !== 'undefined' && (window as any).etapa6) {
+                  (window as any).etapa6();
+                }
+                handleContinue();
+              }}
             >
               🔮 Prosseguir com a Revelação
             </button>
@@ -233,6 +247,13 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
             <button
               onClick={() => window.open('https://go.pepperpay.com.br/ft9lq', '_blank')}
               className="w-full py-3 px-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-violet-400/50 animate-pulse"
+              onClick={() => {
+                // Tracking GA4 + Pixel
+                if (typeof window !== 'undefined' && (window as any).etapa7) {
+                  (window as any).etapa7();
+                }
+                window.open('https://go.pepperpay.com.br/ft9lq', '_blank');
+              }}
             >
               🔓 Liberar Minha Revelação Completa por R$19,90
             </button>
