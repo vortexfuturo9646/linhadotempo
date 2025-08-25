@@ -212,6 +212,11 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
                   </p>
                 </div>
               </div>
+                <div className="bg-gradient-to-r from-amber-500/20 to-yellow-500/20 rounded-lg p-3 backdrop-blur-sm border border-amber-400/30">
+                  <p className="text-amber-100 text-sm leading-tight text-center">
+                    🌟 Para acessar sua revelação completa, é necessária uma autorização simbólica de desbloqueio espiritual que ativa o campo energético da sua leitura.
+                  </p>
+                </div>
             </div>
 
             {/* Contador de Urgência */}
@@ -219,18 +224,23 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
               <p className="text-amber-100 font-medium text-sm mb-2">⏳ O canal será bloqueado em poucos minutos</p>
               <CountdownTimer initialMinutes={10} />
               <p className="text-amber-100 text-xs mt-2">
-                Após esse tempo, sua leitura será selada permanentemente.
+                Após esse tempo, o campo energético será selado e sua revelação ficará inacessível.
               </p>
             </div>
 
             {/* Botão Final */}
             <button
-              onClick={() => window.open('https://vortexfuturo.com.br/WhatsApp', '_blank')}
-              className="w-full py-3 px-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-green-400/50"
+              onClick={() => window.open('https://go.pepperpay.com.br/ft9lq', '_blank')}
+              className="w-full py-3 px-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-violet-400/50 animate-pulse"
             >
-              Receber Minha Revelação Agora no WhatsApp
+              🔓 Liberar Minha Revelação Completa Agora
             </button>
 
+            <div className="text-center">
+              <p className="text-purple-200 text-xs italic">
+                🔮 Sua revelação completa será entregue após a autorização energética
+              </p>
+            </div>
           </div>
         );
 
