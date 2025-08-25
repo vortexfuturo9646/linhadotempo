@@ -1,0 +1,13 @@
+# Este é um placeholder para o arquivo de áudio
+# Substitua este arquivo pelo áudio real: 432hz-chakra-healing-sleep-music.mp3
+
+# Para testar, você pode:
+# 1. Baixar qualquer arquivo MP3 de frequência 432Hz
+# 2. Renomear para: 432hz-chakra-healing-sleep-music.mp3
+# 3. Colocar nesta pasta /public/sounds/
+
+# O áudio deve ter:
+# - Formato: MP3
+# - Frequência: 432Hz (preferencialmente)
+# - Duração: Qualquer (loop automático)
+# - Volume: Médio (será ajustado automaticamente)
