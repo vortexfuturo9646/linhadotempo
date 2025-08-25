@@ -317,7 +317,7 @@ const NumerologyPage: React.FC<NumerologyPageProps> = ({
   return (
     <div className="min-h-screen w-full flex flex-col relative overflow-hidden">
       <CosmicBackground />
-      <SpiritualAmbientSound autoPlay={true} volume={0.2} />
+      <SpiritualAmbientSound autoPlay={true} volume={0.25} />
       
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-12">
         <div className="w-full max-w-4xl mx-auto z-10 space-y-4">

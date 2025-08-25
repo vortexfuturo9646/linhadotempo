@@ -355,7 +355,7 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
   return (
     <div className="min-h-screen w-full flex flex-col relative overflow-hidden">
       <CosmicBackground />
-      <SpiritualAmbientSound autoPlay={true} volume={0.2} />
+      <SpiritualAmbientSound autoPlay={true} volume={0.25} />
       
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
         {/* Header - só mostra nas etapas 1-4 */}

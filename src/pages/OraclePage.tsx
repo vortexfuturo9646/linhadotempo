@@ -416,7 +416,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
   return (
     <div className="min-h-screen w-full flex flex-col relative overflow-hidden">
       <CosmicBackground />
-      <SpiritualAmbientSound autoPlay={true} volume={0.15} />
+      <SpiritualAmbientSound autoPlay={true} volume={0.25} />
       
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-12">
         {step < 5 && (
