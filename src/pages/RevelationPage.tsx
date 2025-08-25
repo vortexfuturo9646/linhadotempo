@@ -80,6 +80,17 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
   }, [audioUrl]);
 
   const handleContinue = () => {
+    // Tocar efeito sonoro baseado na etapa
+    if ((window as any).playSpiritualEffect) {
+      if (currentStep === 0) {
+        (window as any).playSpiritualEffect('revelation');
+      } else if (currentStep === 1) {
+        (window as any).playSpiritualEffect('offer');
+      } else {
+        (window as any).playSpiritualEffect('step');
+      }
+    }
+    
     setCurrentStep(currentStep + 1);
   };
 

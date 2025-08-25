@@ -72,6 +72,12 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
   const showMicroValidation = (text: string) => {
     setValidationText(text);
     setShowValidation(true);
+    
+    // Tocar efeito sonoro de etapa
+    if ((window as any).playSpiritualEffect) {
+      (window as any).playSpiritualEffect('step');
+    }
+    
     setTimeout(() => {
       handleContinue();
     }, 2000);
