@@ -167,7 +167,7 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
             {/* Texto Canalizado */}
             <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-xl p-4 backdrop-blur-md border border-violet-400/40 shadow-lg shadow-violet-500/20">
               <p className="text-purple-100 text-sm leading-tight text-center">
-                {channeledTexts[masterNumber as keyof typeof channeledTexts]}
+                Vejo que você tem uma sensibilidade rara e sente o que os outros sentem, mesmo em silêncio. Mas essa entrega exagerada fez você se perder no equilíbrio. É por isso que sente bloqueios no amor, desgaste nas finanças e até cansaço na alma.
               </p>
             </div>
 
@@ -178,7 +178,7 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
                 <span className="text-red-100 font-medium text-sm">Revelação Parcial</span>
               </div>
               <p className="text-red-100 text-center text-sm italic leading-tight">
-                Esta revelação é parcial. O restante está selado e só pode ser acessado com sua autorização energética.
+                Essa é apenas uma parte da sua revelação — o restante está selado e só pode ser aberto com sua autorização energética.
               </p>
             </div>
 
@@ -217,29 +217,29 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
               <div className="space-y-3">
                 <div className="bg-white/5 rounded-lg p-3 border border-violet-400/20">
                   <p className="text-purple-100 text-sm leading-tight text-center">
-                    O último fragmento da sua Linha do Tempo foi encontrado, mas só pode ser acessado pelo canal direto de revelação.
+                    O último fragmento da sua Linha do Tempo foi encontrado, mas ele está protegido. Se você não desbloquear agora, esse campo será selado e as respostas ficarão inacessíveis.
                   </p>
                 </div>
                 
                 <div className="bg-white/5 rounded-lg p-3 border border-violet-400/20">
                   <p className="text-purple-100 text-sm leading-tight text-center">
-                    ⚠️ Atenção: esse campo não fica aberto por muito tempo. Se você não avançar agora, ele será fechado e a revelação ficará incompleta.
+                    ⚠️ Muitas pessoas deixam esse momento passar e continuam presas nos mesmos ciclos negativos.
                   </p>
                 </div>
               </div>
                 <div className="bg-gradient-to-r from-violet-500/20 to-purple-600/20 rounded-lg p-3 backdrop-blur-sm border border-violet-400/30">
                   <p className="text-purple-100 text-sm leading-tight text-center">
-                    💠 Para desbloquear sua Linha do Tempo e acessar a revelação completa, é necessário realizar uma autorização simbólica de apenas <span className="text-amber-300 font-bold">R$19,90</span>.
+                    Por apenas <span className="text-amber-300 font-bold">R$19,90</span> você pode liberar tudo e finalmente entender como realinhar seu caminho.
                   </p>
                 </div>
             </div>
 
             {/* Contador de Urgência */}
             <div className="bg-amber-400/20 rounded-lg p-3 text-center border border-amber-400/30">
-              <p className="text-amber-100 font-medium text-sm mb-2">⏳ O canal será bloqueado em poucos minutos</p>
+              <p className="text-amber-100 font-medium text-sm mb-2">⏳ Seu canal espiritual se fecha em:</p>
               <CountdownTimer initialMinutes={10} />
               <p className="text-amber-100 text-xs mt-2">
-                Após esse tempo, o campo energético será selado e sua revelação ficará inacessível.
+                Você está a um passo de destravar sua Linha do Tempo Espiritual.
               </p>
             </div>
 
@@ -260,7 +260,7 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
 
             <div className="text-center">
               <p className="text-purple-200 text-xs italic">
-                🔮 Sua revelação completa será entregue após a autorização energética
+                Seu desbloqueio garante acesso à revelação completa e mostra como superar os bloqueios que hoje travam amor, prosperidade e equilíbrio.
               </p>
             </div>
           </div>

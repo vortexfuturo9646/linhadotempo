@@ -87,7 +87,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               </div>
 
               <p className="text-center text-purple-100 text-xs leading-tight px-1">
-                Escolha seu mês de nascimento para acessarmos seu ponto de entrada na linha espiritual.
+                O mês em que você nasceu não foi por acaso — ele abre o portal inicial da sua energia espiritual. Escolha abaixo e descubra como isso marcou seu destino.
               </p>
             </div>
 
@@ -120,7 +120,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               </div>
 
               <p className="text-center text-purple-100 text-xs leading-tight px-1">
-                Selecione o dia em que sua energia entrou neste ciclo terreno.
+                O dia exato em que você chegou ao mundo define o seu número de vibração, responsável por atrair ou bloquear oportunidades. Selecione o seu dia e veja qual vibração você carrega.
               </p>
             </div>
 
@@ -153,7 +153,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               </div>
 
               <p className="text-center text-purple-100 text-xs leading-tight px-1">
-                Identifique a década onde sua missão começou a se formar.
+                Cada década tem uma missão espiritual. A sua mostra o início do seu ciclo terreno e influencia os desafios repetitivos que você enfrenta. Qual é a sua década?
               </p>
             </div>
 
@@ -191,7 +191,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               </div>
 
               <p className="text-center text-purple-100 text-xs leading-tight px-1">
-                Agora precisamos do ano exato da sua chegada para localizar o ponto de ruptura.
+                O ano exato da sua chegada traz a chave do seu ponto de ruptura — quando sua energia começou a se desalinhar. Selecione para revelar.
               </p>
             </div>
 
@@ -249,7 +249,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               </div>
               
               <p className="text-purple-100 text-xs px-1 leading-tight">
-                Seu nome contém a vibração que ancora sua linha espiritual. Digite seu primeiro nome abaixo para revelarmos seu Ciclo Ativo.
+                Seu primeiro nome é um selo energético. Ele guarda a vibração que ancora sua alma e revela porque você atrai certos padrões. Digite abaixo para desbloquear sua Linha Atual.
               </p>
             </div>
 
@@ -328,36 +328,69 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
         return (
           <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
             <div className="text-center space-y-2">
-              <h2 className="text-base font-bold text-amber-300">
-                🔓 Última fase da sua Linha do Tempo Espiritual desbloqueada…
+              <h2 className="text-lg font-bold text-amber-300">
+                🔓 Primeira Revelação
               </h2>
             </div>
 
             <div className="space-y-2">
-              <div className="bg-white/10 rounded-lg p-2 backdrop-blur-sm border border-violet-400/20">
+
+              <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-lg p-3 backdrop-blur-sm border border-violet-400/30">
                 <p className="text-purple-100 text-center text-xs leading-tight">
-                  🪬 Sua leitura foi localizada e está pronta para ser entregue.
+                  Vejo que você tem uma sensibilidade rara e sente o que os outros sentem, mesmo em silêncio. Mas essa entrega exagerada fez você se perder no equilíbrio. É por isso que sente bloqueios no amor, desgaste nas finanças e até cansaço na alma.
                 </p>
               </div>
               
-              <div className="bg-white/10 rounded-lg p-2 backdrop-blur-sm border border-violet-400/20">
-                <p className="text-purple-100 text-center text-xs leading-tight">
-                  O campo vibracional que carrega sua revelação está ativo por <span className="text-amber-300 font-medium">tempo limitado</span> — e precisa de uma autorização final para ser acessado.
+              <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-lg p-3 backdrop-blur-sm border border-red-400/30">
+                <p className="text-red-100 text-center text-xs leading-tight">
+                  Essa é apenas uma parte da sua revelação — o restante está selado e só pode ser aberto com sua autorização energética.
                 </p>
               </div>
+            </div>
 
-              <div className="bg-gradient-to-r from-violet-500/20 to-purple-600/20 rounded-lg p-2 backdrop-blur-sm border border-violet-400/30">
+
+            <button
+              onClick={() => {
+                // Tracking GA4 + Pixel
+                if (typeof window !== 'undefined' && (window as any).etapa8) {
+                  (window as any).etapa8();
+                }
+                setStep(8);
+              }}
+              className="w-full p-2.5 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-violet-400/50 text-xs"
+            >
+              🔮 Prosseguir com a Revelação
+            </button>
+
+          </div>
+        );
+
+      case 8:
+        return (
+          <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
+            <div className="text-center space-y-2">
+              <h2 className="text-lg font-bold text-amber-300">
+                🔓 Liberar Minha Revelação
+              </h2>
+            </div>
+
+            <div className="space-y-2">
+
+              <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-lg p-3 backdrop-blur-sm border border-violet-400/30">
                 <p className="text-purple-100 text-center text-xs leading-tight">
-                  🌀 Essa liberação energética tem um custo simbólico de conexão: <span className="text-amber-300 font-medium">R$ 19,90</span>
+                  O último fragmento da sua Linha do Tempo foi encontrado, mas ele está protegido. Se você não desbloquear agora, esse campo será selado e as respostas ficarão inacessíveis.
                 </p>
-                <p className="text-purple-200 text-center text-xs italic mt-1">
-                  (Somente enquanto o campo estiver aberto neste ciclo espiritual)
+              </div>
+              
+              <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-lg p-3 backdrop-blur-sm border border-red-400/30">
+                <p className="text-red-100 text-center text-xs leading-tight">
+                  ⚠️ Muitas pessoas deixam esse momento passar e continuam presas nos mesmos ciclos negativos. Por apenas <span className="text-amber-300 font-bold">R$19,90</span> você pode liberar tudo e finalmente entender como realinhar seu caminho.
                 </p>
               </div>
             </div>
 
             <div className="bg-amber-400/20 rounded-lg p-2 text-center border border-amber-400/30">
-              <p className="text-amber-100 font-medium text-xs">⚠️ O campo se fecha em aproximadamente:</p>
+              <p className="text-amber-100 font-medium text-xs">⏳ Seu canal espiritual se fecha em:</p>
               <CountdownTimer initialMinutes={10} />
             </div>
 
@@ -367,68 +400,16 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                 if (typeof window !== 'undefined' && (window as any).etapa8) {
                   (window as any).etapa8();
                 }
-                window.open('https://wa.me/554488286759?text=Oi%2C+acabei+de+liberar+minha+Linha+Espiritual+e+quero+receber+a+leitura+completa.', '_blank');
+                window.open('https://go.pepperpay.com.br/ft9lq', '_blank');
               }}
-              className="w-full p-2.5 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-green-400/50 animate-pulse text-xs"
+              className="w-full p-2.5 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-violet-400/50 animate-pulse text-xs"
             >
-              📱 Ativar Leitura Completa no WhatsApp
+              🔓 Liberar Minha Revelação Completa por R$19,90
             </button>
 
             <div className="text-center">
               <p className="text-purple-200 text-xs italic">
-                ⚠️ Após esse tempo, sua leitura será selada.
-              </p>
-            </div>
-          </div>
-        );
-
-      case 8:
-        return (
-          <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
-            <div className="text-center space-y-2">
-              <h2 className="text-base font-bold text-amber-300">
-                🔓 Última fase da sua Linha do Tempo Espiritual desbloqueada…
-              </h2>
-            </div>
-
-            <div className="space-y-2">
-              <div className="bg-white/10 rounded-lg p-2 backdrop-blur-sm border border-violet-400/20">
-                <p className="text-purple-100 text-center text-xs leading-tight">
-                  🪬 Sua leitura foi localizada e está pronta para ser entregue.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 rounded-lg p-2 backdrop-blur-sm border border-violet-400/20">
-                <p className="text-purple-100 text-center text-xs leading-tight">
-                  O campo vibracional que carrega sua revelação está ativo por <span className="text-amber-300 font-medium">tempo limitado</span> — e precisa de uma autorização final para ser acessado.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-r from-violet-500/20 to-purple-600/20 rounded-lg p-2 backdrop-blur-sm border border-violet-400/30">
-                <p className="text-purple-100 text-center text-xs leading-tight">
-                  🌀 Essa liberação energética tem um custo simbólico de conexão: <span className="text-amber-300 font-medium">R$ 19,90</span>
-                </p>
-                <p className="text-purple-200 text-center text-xs italic mt-1">
-                  (Somente enquanto o campo estiver aberto neste ciclo espiritual)
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-amber-400/20 rounded-lg p-2 text-center border border-amber-400/30">
-              <p className="text-amber-100 font-medium text-xs">⚠️ O campo se fecha em aproximadamente:</p>
-              <CountdownTimer initialMinutes={10} />
-            </div>
-
-            <button
-              onClick={() => window.open('https://wa.me/554488286759?text=Oi%2C+acabei+de+liberar+minha+Linha+Espiritual+e+quero+receber+a+leitura+completa.', '_blank')}
-              className="w-full p-2.5 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-green-400/50 animate-pulse text-xs"
-            >
-              📱 Ativar Leitura Completa no WhatsApp
-            </button>
-
-            <div className="text-center">
-              <p className="text-purple-200 text-xs italic">
-                ⚠️ Após esse tempo, sua leitura será selada.
+                Você está a um passo de destravar sua Linha do Tempo Espiritual.
               </p>
             </div>
           </div>
