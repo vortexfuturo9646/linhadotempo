@@ -10,6 +10,92 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- ===================== -->
+    <!-- GOOGLE ANALYTICS 4 -->
+    <!-- ===================== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-31QEQLYNZR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-31QEQLYNZR');
+    </script>
+
+    <!-- ===================== -->
+    <!-- FACEBOOK PIXEL -->
+    <!-- ===================== -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1000408345613100');
+      fbq('track', 'PageView');
+    </script>
+
+    <!-- ===================== -->
+    <!-- EVENTOS PERSONALIZADOS (GA4 + PIXEL) -->
+    <!-- ===================== -->
+    <script>
+      // 🔹 ETAPA 1 - Seleção do mês
+      function etapa1(mes) {
+        gtag('event', 'etapa_1_mes', {'event_category':'funil','mes': mes});
+        fbq('trackCustom', 'Etapa_1_Mes', {mes: mes});
+      }
+
+      // 🔹 ETAPA 2 - Seleção do dia
+      function etapa2(dia) {
+        gtag('event', 'etapa_2_dia', {'event_category':'funil','dia': dia});
+        fbq('trackCustom', 'Etapa_2_Dia', {dia: dia});
+      }
+
+      // 🔹 ETAPA 3 - Seleção da década
+      function etapa3(decada) {
+        gtag('event', 'etapa_3_decada', {'event_category':'funil','decada': decada});
+        fbq('trackCustom', 'Etapa_3_Decada', {decada: decada});
+      }
+
+      // 🔹 ETAPA 4 - Seleção do ano
+      function etapa4(ano) {
+        gtag('event', 'etapa_4_ano', {'event_category':'funil','ano': ano});
+        fbq('trackCustom', 'Etapa_4_Ano', {ano: ano});
+      }
+
+      // 🔹 ETAPA 5 - Inserção do nome
+      function etapa5(nome) {
+        gtag('event', 'etapa_5_nome', {'event_category':'funil','nome': nome});
+        fbq('trackCustom', 'Etapa_5_Nome', {nome: nome});
+      }
+
+      // 🔹 ETAPA 6 - Primeira revelação (Prosseguir)
+      function etapa6() {
+        gtag('event', 'etapa_6_revelacao', {'event_category':'funil','acao':'prosseguir'});
+        fbq('trackCustom', 'Etapa_6_Revelacao', {acao: 'prosseguir'});
+      }
+
+      // 🔹 ETAPA 7 - Tela de oferta (Liberar revelação)
+      function etapa7() {
+        gtag('event', 'etapa_7_oferta', {'event_category':'funil','acao':'botao_oferta'});
+        fbq('trackCustom', 'Etapa_7_Oferta', {acao: 'botao_oferta'});
+      }
+
+      // 🔹 ETAPA 8 - Checkout (início do pagamento)
+      function etapa8() {
+        gtag('event', 'etapa_8_checkout', {'event_category':'funil','acao':'checkout_iniciado'});
+        fbq('track', 'InitiateCheckout');
+      }
+
+      // (Opcional) Compra concluída
+      function compra(valor) {
+        gtag('event', 'purchase', {'event_category':'funil','value': valor, 'currency': 'BRL'});
+        fbq('track', 'Purchase', {value: valor, currency: 'BRL'});
+      }
+    </script>
+
     <!-- UTMify -->
     <script
       src="https://cdn.utmify.com.br/scripts/utms/latest.js"
@@ -33,6 +119,11 @@
       fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
+
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=1000408345613100&ev=PageView&noscript=1"/>
+    </noscript>
   </head>
 
   <body>
