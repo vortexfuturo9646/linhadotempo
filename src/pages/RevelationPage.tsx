@@ -191,7 +191,7 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
             <div className="text-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-red-400/20 to-orange-400/20 rounded-full blur-xl"></div>
-                <h1 className="relative text-lg md:text-xl font-bold text-amber-300 mb-2 animate-pulse">
+                <h1 className="relative text-lg md:text-xl font-bold text-amber-300 mb-2">
                   🔒 Sua Leitura Está Selada
                 </h1>
               </div>
@@ -202,7 +202,7 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
               <div className="space-y-3">
                 <div className="bg-white/5 rounded-lg p-3 border border-violet-400/20">
                   <p className="text-purple-100 text-sm leading-tight text-center">
-                    O último fragmento da sua Linha do Tempo foi encontrado, mas só pode ser ativado pelo canal direto de revelação.
+                    O último fragmento da sua Linha do Tempo foi encontrado, mas só pode ser acessado pelo canal direto de revelação.
                   </p>
                 </div>
                 
@@ -218,21 +218,19 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
             <div className="bg-amber-400/20 rounded-lg p-3 text-center border border-amber-400/30">
               <p className="text-amber-100 font-medium text-sm mb-2">⏳ O canal será bloqueado em poucos minutos</p>
               <CountdownTimer initialMinutes={10} />
+              <p className="text-amber-100 text-xs mt-2">
+                Após esse tempo, sua leitura será selada permanentemente.
+              </p>
             </div>
 
             {/* Botão Final */}
             <button
               onClick={() => window.open('https://wa.me/554488286759?text=Oi%2C+acabei+de+liberar+minha+Linha+Espiritual+e+quero+receber+a+leitura+completa.', '_blank')}
-              className="w-full py-3 px-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-green-400/50 animate-pulse"
+              className="w-full py-3 px-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-green-400/50"
             >
-              💬 Ativar Minha Leitura no WhatsApp
+              Receber Minha Revelação Agora no WhatsApp
             </button>
 
-            <div className="text-center">
-              <p className="text-purple-200 text-xs italic">
-                ⚠️ Após esse tempo, sua leitura será selada.
-              </p>
-            </div>
           </div>
         );
 
