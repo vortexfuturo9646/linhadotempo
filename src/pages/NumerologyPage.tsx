@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import CosmicBackground from '../components/CosmicBackground';
 import DataSlideShow from '../components/DataSlideShow';
 import Footer from '../components/Footer';
+import SpiritualAmbientSound from '../components/SpiritualAmbientSound';
 import { Play, Pause, Volume2, Upload, FileAudio } from 'lucide-react';
 
 interface NumerologyPageProps {
@@ -316,6 +317,7 @@ const NumerologyPage: React.FC<NumerologyPageProps> = ({
   return (
     <div className="min-h-screen w-full flex flex-col relative overflow-hidden">
       <CosmicBackground />
+      <SpiritualAmbientSound autoPlay={true} volume={0.2} />
       
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-12">
         <div className="w-full max-w-4xl mx-auto z-10 space-y-4">
