@@ -225,7 +225,7 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
 
             {/* Botão Final */}
             <button
-              onClick={() => window.open('https://wa.me/554488286759?text=Oi%2C+acabei+de+liberar+minha+Linha+Espiritual+e+quero+receber+a+leitura+completa.', '_blank')}
+              onClick={() => window.open('https://vortexfuturo.com.br/WhatsApp', '_blank')}
               className="w-full py-3 px-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-green-400/50"
             >
               Receber Minha Revelação Agora no WhatsApp
