@@ -191,8 +191,8 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
             <div className="text-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-red-400/20 to-orange-400/20 rounded-full blur-xl"></div>
-                <h1 className="relative text-lg md:text-xl font-bold text-red-300 mb-2 animate-pulse">
-                  ⚠️ Sua Leitura Está Selada
+                <h1 className="relative text-lg md:text-xl font-bold text-amber-300 mb-2 animate-pulse">
+                  🔒 Sua Leitura Está Selada
                 </h1>
               </div>
             </div>
@@ -202,28 +202,21 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
               <div className="space-y-3">
                 <div className="bg-white/5 rounded-lg p-3 border border-violet-400/20">
                   <p className="text-purple-100 text-sm leading-tight text-center">
-                    O último fragmento da sua Linha do Tempo só pode ser acessado com sua permissão energética.
+                    O último fragmento da sua Linha do Tempo foi encontrado, mas só pode ser ativado pelo canal direto de revelação.
                   </p>
                 </div>
                 
                 <div className="bg-white/5 rounded-lg p-3 border border-violet-400/20">
                   <p className="text-purple-100 text-sm leading-tight text-center">
-                    Para desbloquear essa leitura, é necessário um sinal simbólico de <span className="text-amber-300 font-medium">R$19,90</span> — que representa seu aceite espiritual e ativa o canal de revelação completa.
+                    ⚠️ Atenção: esse campo não fica aberto por muito tempo. Se você não avançar agora, ele será fechado e a revelação ficará incompleta.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Frase de Impacto */}
-            <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-lg p-3 backdrop-blur-sm border border-red-400/30">
-              <p className="text-red-200 text-center text-sm font-medium animate-pulse">
-                "Alguns ciclos só se repetem porque você ainda não escolheu quebrá-los."
-              </p>
-            </div>
-
             {/* Contador de Urgência */}
             <div className="bg-amber-400/20 rounded-lg p-3 text-center border border-amber-400/30">
-              <p className="text-amber-100 font-medium text-sm mb-2">⏳ O canal de revelação será selado em poucos minutos</p>
+              <p className="text-amber-100 font-medium text-sm mb-2">⏳ O canal será bloqueado em poucos minutos</p>
               <CountdownTimer initialMinutes={10} />
             </div>
 
@@ -232,12 +225,12 @@ const RevelationPage: React.FC<RevelationPageProps> = ({
               onClick={() => window.open('https://wa.me/554488286759?text=Oi%2C+acabei+de+liberar+minha+Linha+Espiritual+e+quero+receber+a+leitura+completa.', '_blank')}
               className="w-full py-3 px-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-green-400/50 animate-pulse"
             >
-              📱 Ativar Leitura Completa no WhatsApp
+              💬 Ativar Minha Leitura no WhatsApp
             </button>
 
             <div className="text-center">
               <p className="text-purple-200 text-xs italic">
-                ⚠️ Após esse tempo, sua leitura será selada permanentemente.
+                ⚠️ Após esse tempo, sua leitura será selada.
               </p>
             </div>
           </div>
