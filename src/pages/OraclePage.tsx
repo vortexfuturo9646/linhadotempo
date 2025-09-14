@@ -46,7 +46,7 @@ interface OraclePageProps {
 }
 
 const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
   const [showValidation, setShowValidation] = useState(false);
   const [validationText, setValidationText] = useState('');
   const [selectedMonth, setSelectedMonth] = useState<string>('');
@@ -95,6 +95,44 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
 
   const renderStep = () => {
     switch (step) {
+      case 0:
+        return (
+          <div className="space-y-8">
+            {/* Hero Section */}
+            <div className="text-center space-y-4">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-violet-400/20 rounded-full blur-xl"></div>
+                <h1 className="relative text-2xl md:text-3xl font-bold">
+                  <span className="text-amber-300 drop-shadow-lg">SUA LINHA DO TEMPO ESPIRITUAL FOI ATIVADA</span>
+                </h1>
+              </div>
+              <p className="text-purple-100 text-base md:text-lg drop-shadow-md leading-tight max-w-2xl mx-auto">
+                Descubra o ponto exato em que sua energia se desviou — e o que precisa ser desbloqueado para realinhar seus caminhos ainda neste ciclo de <span className="text-amber-300 font-semibold">2025</span>.
+              </p>
+              
+              {/* Badge de Progresso */}
+              <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-full py-2 px-4 backdrop-blur-md border border-violet-400/40 inline-block mt-4">
+                <p className="text-purple-100 text-sm font-medium">
+                  ⭐ Etapa 1 de 8 desbloqueada...
+                </p>
+              </div>
+              
+              {/* CTA Principal */}
+              <div className="mt-6 space-y-2">
+                <button
+                  onClick={() => setStep(1)}
+                  className="bg-gradient-to-r from-violet-600 to-purple-600 text-white py-3 px-8 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-violet-400/50"
+                >
+                  🔮 Começar Revelação
+                </button>
+                <p className="text-purple-200 text-sm italic">
+                  Sem custo nesta etapa. Leva menos de 2 minutos.
+                </p>
+              </div>
+            </div>
+          </div>
+        );
+
       case 1:
         return (
           <div className="space-y-8">
@@ -541,38 +579,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
       <SpiritualAmbientSound autoPlay={true} volume={0.25} />
       
       <div className="flex-1 flex flex-col items-center justify-center px-4 py-12">
-        {step < 5 && (
-          <div className="text-center space-y-2 mb-6">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-violet-400/20 rounded-full blur-xl"></div>
-              <h1 className="relative text-2xl md:text-3xl font-bold">
-                <span className="text-amber-300 drop-shadow-lg">SUA LINHA DO TEMPO ESPIRITUAL FOI ATIVADA</span>
-              </h1>
-            </div>
-            <p className="text-purple-100 text-base md:text-lg drop-shadow-md leading-tight max-w-2xl mx-auto">
-              Descubra o ponto exato em que sua energia se desviou — e o que precisa ser desbloqueado para realinhar seus caminhos ainda neste ciclo de <span className="text-amber-300 font-semibold">2025</span>.
-            </p>
-            
-            {/* Badge de Progresso */}
-            <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-full py-2 px-4 backdrop-blur-md border border-violet-400/40 inline-block mt-4">
-              <p className="text-purple-100 text-sm font-medium">
-                ⭐ Etapa 1 de 8 desbloqueada...
-              </p>
-            </div>
-            
-            {/* CTA Principal */}
-            <div className="mt-6 space-y-2">
-              <button className="bg-gradient-to-r from-violet-600 to-purple-600 text-white py-3 px-8 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] border border-violet-400/50">
-                🔮 Começar Revelação
-              </button>
-              <p className="text-purple-200 text-sm italic">
-                Sem custo nesta etapa. Leva menos de 2 minutos.
-              </p>
-            </div>
-          </div>
-        )}
-        
-        {step >= 5 && (
+        {step >= 5 && step < 8 && (
           <div className="text-center space-y-2 mb-6">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-violet-400/20 rounded-full blur-xl"></div>
@@ -585,7 +592,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             </p>
           </div>
         )}
-        {renderStep()}
+        <div className="w-full max-w-lg mx-auto bg-slate-900/90 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-violet-400/40 z-10">{renderStep()}</div>
       </div>
       
       <Footer />
