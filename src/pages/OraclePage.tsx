@@ -582,7 +582,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             </div>
             <p className="text-purple-100 text-sm drop-shadow-md leading-tight">
               Revelando o momento da ruptura energética
-            </h1>
+            </p>
           </div>
         )}
         {renderStep()}
