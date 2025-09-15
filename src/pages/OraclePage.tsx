@@ -56,6 +56,8 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
   const [name, setName] = useState('');
   const [showAudio, setShowAudio] = useState(false);
   const [showOffer, setShowOffer] = useState(false);
+  const [selectedCard, setSelectedCard] = useState<number | null>(null);
+  const [showCardReveal, setShowCardReveal] = useState(false);
 
   const months = [
     'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
@@ -450,13 +452,110 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
           </div>
         );
 
-      case 7:
+      case 6:
+        const cardTitles = [
+          'Portal dos Sentimentos',
+          'Portal da Prosperidade', 
+          'Portal da Proteção'
+        ];
+
+        const cardRevelations = [
+          'Vejo excesso de entrega sem retorno. Essa troca desigual abriu microfissuras no campo emocional.',
+          'Há um padrão de esforço alto com retorno baixo. Sinal de bloqueio no eixo merecimento–materialização.',
+          'Senti dispersões recentes drenando sua força. Precisamos selar cortes energéticos para fechar essa porta.'
+        ];
+
         return (
           <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
             {/* Indicador de Progresso */}
             <div className="text-center">
               <p className="text-purple-200 text-xs font-medium">
                 ✨ Etapa 6 de 8 desbloqueada...
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-sm border border-amber-400/30 shadow-lg">
+              ESCOLHA O PORTAL QUE VAI TE RESPONDER AGORA
+            </div>
+
+            <p className="text-center text-purple-100 text-base leading-tight px-1">
+              Três cartas foram seladas para você. Cada uma aponta o portal onde está o seu maior bloqueio do momento.
+            </p>
+
+            {/* Cards Section */}
+            <div className="grid grid-cols-3 gap-2">
+              {[0, 1, 2].map((cardIndex) => (
+                <div key={cardIndex} className="flex flex-col items-center space-y-2">
+                  <button
+                    onClick={() => {
+                      setSelectedCard(cardIndex);
+                      setShowCardReveal(true);
+                      // Tocar efeito sonoro
+                      if ((window as any).playSpiritualEffect) {
+                        (window as any).playSpiritualEffect('revelation');
+                      }
+                    }}
+                    className={`w-full aspect-[3/4] rounded-lg backdrop-blur-sm transition-all duration-500 border-2 ${
+                      selectedCard === cardIndex
+                        ? 'bg-gradient-to-br from-amber-400/30 to-violet-500/30 border-amber-400/60 shadow-lg shadow-amber-400/30 scale-105'
+                        : 'bg-gradient-to-br from-purple-600/30 to-indigo-600/30 border-violet-400/40 hover:border-amber-400/50 hover:scale-105'
+                    }`}
+                  >
+                    <div className="w-full h-full flex flex-col items-center justify-center p-2">
+                      {selectedCard === cardIndex ? (
+                        <div className="text-center space-y-1">
+                          <div className="text-amber-300 text-lg">🔮</div>
+                          <p className="text-amber-300 font-bold text-xs leading-tight">
+                            {cardTitles[cardIndex]}
+                          </p>
+                        </div>
+                      ) : (
+                        <div className="text-center space-y-2">
+                          <div className="text-violet-300 text-2xl">🃏</div>
+                          <div className="w-full h-8 bg-gradient-to-r from-purple-500/20 to-violet-500/20 rounded border border-violet-400/30"></div>
+                          <div className="w-3/4 h-2 bg-gradient-to-r from-purple-500/20 to-violet-500/20 rounded border border-violet-400/30 mx-auto"></div>
+                        </div>
+                      )}
+                    </div>
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            {/* Card Revelation */}
+            {showCardReveal && selectedCard !== null && (
+              <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-lg p-3 backdrop-blur-sm border border-violet-400/30 animate-fade-in">
+                <p className="text-purple-100 text-center text-sm leading-tight">
+                  {cardRevelations[selectedCard]}
+                </p>
+              </div>
+            )}
+
+            {/* Continue Button */}
+            {showCardReveal && (
+              <button
+                onClick={() => {
+                  // Tracking GA4 + Pixel
+                  if (typeof window !== 'undefined' && (window as any).etapa6) {
+                    (window as any).etapa6();
+                  }
+                  setStep(7);
+                }}
+                className="w-full p-2.5 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-violet-400/50 text-sm animate-fade-in"
+              >
+                🔮 Prosseguir com a Revelação
+              </button>
+            )}
+          </div>
+        );
+
+      case 7:
+        return (
+          <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
+            {/* Indicador de Progresso */}
+            <div className="text-center">
+              <p className="text-purple-200 text-xs font-medium">
+                ✨ Etapa 7 de 8 desbloqueada...
               </p>
             </div>
 
@@ -511,7 +610,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             {/* Indicador de Progresso */}
             <div className="text-center">
               <p className="text-purple-200 text-xs font-medium">
-                ✨ Etapa 7 de 8 desbloqueada...
+                ✨ Etapa 8 de 8 desbloqueada...
               </p>
             </div>
 
