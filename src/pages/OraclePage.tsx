@@ -145,11 +145,11 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
 
             <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
               <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-xs border border-amber-400/30 shadow-lg">
-                ETAPA 1 - SEU MÊS DE NASCIMENTO
+                ETAPA 1 – SEU MÊS DE NASCIMENTO
               </div>
 
               <p className="text-center text-purple-100 text-xs leading-tight px-1">
-                O mês em que você nasceu não foi por acaso — ele abre o portal inicial da sua energia espiritual. Escolha abaixo e descubra como isso marcou seu destino.
+                O mês em que você nasceu abre o primeiro portal da sua vibração. Selecione e veja como isso marca seu destino.
               </p>
             </div>
 
@@ -194,11 +194,11 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
 
             <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
               <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-xs border border-amber-400/30 shadow-lg">
-                ETAPA 2 - SEU DIA DE NASCIMENTO
+                ETAPA 2 – SEU DIA DE NASCIMENTO
               </div>
 
               <p className="text-center text-purple-100 text-xs leading-tight px-1">
-                O dia exato em que você chegou ao mundo define o seu número de vibração, responsável por atrair ou bloquear oportunidades. Selecione o seu dia e veja qual vibração você carrega.
+                O dia exato define seu número de vibração — ele pode atrair oportunidades ou bloquear ciclos. Escolha o seu dia para revelar.
               </p>
             </div>
 
@@ -243,11 +243,11 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
 
             <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
               <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-xs border border-amber-400/30 shadow-lg">
-                ETAPA 3 - SUA DÉCADA DE NASCIMENTO
+                ETAPA 3 – SUA DÉCADA
               </div>
 
               <p className="text-center text-purple-100 text-xs leading-tight px-1">
-                Cada década tem uma missão espiritual. A sua mostra o início do seu ciclo terreno e influencia os desafios repetitivos que você enfrenta. Qual é a sua década?
+                Cada década inicia um ciclo terreno. Selecionar sua década ajuda a localizar padrões que seguem se repetindo.
               </p>
             </div>
 
@@ -297,11 +297,11 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
 
             <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
               <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-xs border border-amber-400/30 shadow-lg">
-                ETAPA 4 - SEU ANO EXATO
+                ETAPA 4 – SEU ANO EXATO
               </div>
 
               <p className="text-center text-purple-100 text-xs leading-tight px-1">
-                O ano exato da sua chegada traz a chave do seu ponto de ruptura — quando sua energia começou a se desalinhar. Selecione para revelar.
+                O ano de chegada guarda a chave do seu ponto de ruptura — quando a energia começou a se desalinhavar. Selecione para revelar.
               </p>
             </div>
 
