@@ -107,7 +107,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                 </h1>
               </div>
               <p className="text-purple-100 text-base md:text-lg drop-shadow-md leading-tight max-w-2xl mx-auto">
-                Descubra o ponto exato em que sua energia se desviou — e o que precisa ser desbloqueado para realinhar seus caminhos ainda neste ciclo de <span className="text-amber-300 font-semibold">2025</span>.
+                Descubra o ponto exato em que sua energia se desviou e o que precisa ser desbloqueado para realinhar seus caminhos ainda neste ciclo de <span className="text-amber-300 font-semibold">2025</span>.
               </p>
               
               {/* Badge de Progresso */}
