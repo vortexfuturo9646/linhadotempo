@@ -402,14 +402,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                     if (typeof window !== 'undefined' && (window as any).etapa5) {
                       (window as any).etapa5(name.trim());
                     }
-                    const birthDate = `${selectedDay.toString().padStart(2, '0')}/${months.indexOf(selectedMonth) + 1}/${selectedYear}`;
-                    const url = `/revelacao?nome=${encodeURIComponent(name.trim())}&data=${encodeURIComponent(birthDate)}`;
-                    // Use internal navigation for instant transition
-                    if (navigate) {
-                      navigate(url);
-                    } else {
-                      window.location.replace(url);
-                    }
+                    setStep(6);
                   }
                 }}
                 disabled={!name.trim()}
@@ -419,7 +412,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                     : 'bg-white/10 text-purple-300 cursor-not-allowed border border-violet-400/20'
                 }`}
               >
-                <span className="text-sm">🔍 Revelar Linha Atual</span>
+                <span className="text-sm">🔍 Continuar</span>
                 <span className="text-lg">✨</span>
               </button>
             </div>
