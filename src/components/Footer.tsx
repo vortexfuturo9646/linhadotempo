@@ -40,15 +40,6 @@ const Footer: React.FC = () => {
           <p className="text-purple-100 font-medium text-xs md:text-sm">
             Todos os direitos reservados.
           </p>
-          
-          <div className="max-w-2xl mx-auto hidden md:block">
-            <p className="text-purple-200 text-xs leading-relaxed">
-              Todo o conteúdo deste site incluindo textos, imagens, logotipos, gráficos, elementos visuais e funcionalidades é protegido por leis de direitos autorais aplicáveis.
-            </p>
-            <p className="text-purple-200 text-xs leading-relaxed mt-2">
-              A reprodução, distribuição ou qualquer uso não autorizado deste material é expressamente proibida e pode resultar em medidas legais conforme a legislação vigente.
-            </p>
-          </div>
         </div>
       </div>
     </footer>
