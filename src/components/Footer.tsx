@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
         {/* Copyright Section */}
         <div className="text-center space-y-2 md:space-y-3">
           <p className="text-purple-100 font-medium text-sm">
-            © 2025 Vortex Futuro.
+            © 2025 Vortex Futuro
           </p>
         </div>
       </div>
