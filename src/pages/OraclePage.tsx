@@ -482,94 +482,12 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
         );
 
       case 6:
-        const cardTitles = [
-          'Portal dos Sentimentos',
-          'Portal da Prosperidade', 
-          'Portal da Proteção'
-        ];
-
-        const cardRevelations = [
-          'Vejo excesso de entrega sem retorno. Essa troca desigual abriu microfissuras no campo emocional.',
-          'Há um padrão de esforço alto com retorno baixo. Sinal de bloqueio no eixo merecimento–materialização.',
-          'Senti dispersões recentes drenando sua força. Precisamos selar cortes energéticos para fechar essa porta.'
-        ];
-
-        const cardImages = [
-          'http://vortexfuturo.com.br/wp-content/uploads/2025/09/dois-de-espadas.webp',
-          'http://vortexfuturo.com.br/wp-content/uploads/2025/09/cinco-de-ouros.webp',
-          'http://vortexfuturo.com.br/wp-content/uploads/2025/09/A-torre-1.webp'
-        ];
         return (
           <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
             {/* Indicador de Progresso */}
             <div className="text-center">
               <p className="text-purple-200 text-xs font-medium">
                 ✨ Etapa 6 de 8 desbloqueada...
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-sm border border-amber-400/30 shadow-lg">
-              AS CARTAS QUE SAÍRAM PARA VOCÊ
-            </div>
-
-            <p className="text-center text-purple-100 text-base leading-tight px-1">
-              Três cartas foram reveladas para você. Cada uma aponta um portal onde está o seu maior bloqueio do momento.
-            </p>
-
-            {/* Cards Section */}
-            <div className="grid grid-cols-1 gap-3 max-w-xs mx-auto">
-              {[0, 1, 2].map((cardIndex) => (
-                <div key={cardIndex} className="flex flex-col items-center space-y-2">
-                  <div className="w-full h-40 rounded-lg backdrop-blur-sm transition-all duration-500 border-2 bg-gradient-to-br from-amber-400/30 to-violet-500/30 border-amber-400/60 shadow-lg shadow-amber-400/30">
-                    <div className="w-full h-full relative">
-                      <img 
-                        src={cardImages[cardIndex]} 
-                        alt={cardTitles[cardIndex]}
-                        className="w-full h-full object-cover rounded-md"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-md"></div>
-                      <div className="absolute bottom-2 left-2 right-2">
-                        <p className="text-amber-300 font-bold text-xs leading-tight text-center drop-shadow-lg">
-                          {cardTitles[cardIndex]}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-purple-200 text-xs font-medium text-center">
-                    {cardTitles[cardIndex]}
-                  </p>
-                  <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-lg p-2 backdrop-blur-sm border border-violet-400/30 w-full">
-                    <p className="text-purple-100 text-center text-xs leading-tight">
-                      {cardRevelations[cardIndex]}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Continue Button - Always Visible */}
-            <button
-              onClick={() => {
-                // Tracking GA4 + Pixel
-                if (typeof window !== 'undefined' && (window as any).etapa6) {
-                  (window as any).etapa6();
-                }
-                setStep(7);
-              }}
-              className="w-full p-2.5 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-violet-400/50 text-sm"
-            >
-              🔮 Prosseguir com a Revelação
-            </button>
-          </div>
-        );
-
-      case 7:
-        return (
-          <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
-            {/* Indicador de Progresso */}
-            <div className="text-center">
-              <p className="text-purple-200 text-xs font-medium">
-                ✨ Etapa 7 de 8 desbloqueada...
               </p>
             </div>
 
@@ -587,7 +505,6 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             </div>
 
             <div className="space-y-2">
-
               <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-lg p-3 backdrop-blur-sm border border-violet-400/30">
                 <p className="text-purple-100 text-center text-sm leading-tight">
                   Vejo que você tem uma sensibilidade rara e sente o que os outros sentem, mesmo em silêncio. Mas essa entrega exagerada fez você se perder no equilíbrio. É por isso que sente bloqueios no amor, desgaste nas finanças e até cansaço na alma.
@@ -595,91 +512,107 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               </div>
               
               <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-lg p-3 backdrop-blur-sm border border-red-400/30">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <Sparkles className="text-red-300" size={16} />
+                  <span className="text-red-100 font-medium text-sm">⚠️ Revelação Parcial</span>
+                </div>
                 <p className="text-red-100 text-center text-sm leading-tight">
-                  Essa é apenas uma parte da sua revelação — o restante está selado e só pode ser aberto com sua autorização energética.
+                  Esta é apenas uma parte da sua revelação. O restante está protegido e só pode ser desbloqueado agora.
                 </p>
               </div>
             </div>
 
-
             <button
               onClick={() => {
                 // Tracking GA4 + Pixel
-                if (typeof window !== 'undefined' && (window as any).etapa8) {
-                  (window as any).etapa8();
+                if (typeof window !== 'undefined' && (window as any).etapa6) {
+                  (window as any).etapa6();
                 }
-                setStep(8);
+                setStep(7);
               }}
-              className="w-full p-2.5 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-violet-400/50 text-xs"
+              className="w-full p-2.5 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-violet-400/50 text-xs animate-pulse"
             >
-              🔮 Prosseguir com a Revelação
+              🔓 Liberar Revelação Completa por R$19,90
             </button>
-
           </div>
         );
 
-      case 8:
+      case 7:
         return (
           <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
             {/* Indicador de Progresso */}
             <div className="text-center">
               <p className="text-purple-200 text-xs font-medium">
-                ✨ Etapa 8 de 8 desbloqueada...
+                ✨ Etapa 7 de 8 desbloqueada...
               </p>
             </div>
 
             <div className="text-center space-y-2">
               <h2 className="text-lg font-bold text-amber-300">
-                🔓 Liberar Minha Revelação
+                🔒 Sua Leitura Está Selada
               </h2>
             </div>
 
             <div className="space-y-2">
-
-              <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-lg p-3 backdrop-blur-sm border border-violet-400/30">
+              <div className="bg-white/10 rounded-lg p-3 border border-violet-400/20">
                 <p className="text-purple-100 text-center text-sm leading-tight">
                   O último fragmento da sua Linha do Tempo foi encontrado, mas ele está protegido. Se você não desbloquear agora, esse campo será selado e as respostas ficarão inacessíveis.
                 </p>
               </div>
               
-              <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-lg p-3 backdrop-blur-sm border border-red-400/30">
-                <p className="text-red-100 text-center text-sm leading-tight">
-                  ⚠️ Muitas pessoas deixam esse momento passar e continuam presas nos mesmos ciclos negativos. Por apenas <span className="text-amber-300 font-bold">R$19,90</span> você pode liberar tudo e finalmente entender como realinhar seu caminho.
+              <div className="bg-white/10 rounded-lg p-3 border border-violet-400/20">
+                <p className="text-purple-100 text-center text-sm leading-tight">
+                  ⚠️ Muitas pessoas deixam esse momento passar e continuam presas nos mesmos ciclos negativos.
                 </p>
               </div>
-
-              <div className="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg p-3 backdrop-blur-sm border border-emerald-400/30">
-                <p className="text-emerald-100 text-center text-sm leading-tight">
+              
+              <div className="bg-white/10 rounded-lg p-3 border border-violet-400/20">
+                <p className="text-red-100 text-center text-sm leading-tight">
                   Ao liberar sua revelação, você receberá instruções claras para alinhar amor, prosperidade e equilíbrio ainda em 2025.
                 </p>
               </div>
+              
+              <div className="bg-gradient-to-r from-violet-500/20 to-purple-600/20 rounded-lg p-3 backdrop-blur-sm border border-violet-400/30">
+                <p className="text-purple-100 text-sm leading-tight text-center">
+                  Por apenas <span className="text-amber-300 font-bold">R$19,90</span> você pode liberar tudo e finalmente entender como realinhar seu caminho.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-amber-400/20 rounded-lg p-2 text-center border border-amber-400/30">
-              <p className="text-amber-100 font-medium text-xs">⏳ Seu canal espiritual se fecha em:</p>
+            {/* Contador de Urgência */}
+            <div className="bg-amber-400/20 rounded-lg p-3 text-center border border-amber-400/30">
+              <p className="text-amber-100 font-medium text-sm mb-2">⏳ Seu canal espiritual se fecha em:</p>
               <CountdownTimer initialMinutes={10} />
+              <p className="text-amber-100 text-xs mt-2">
+                Se não desbloquear agora, este campo será selado e você não terá acesso às respostas novamente.
+              </p>
             </div>
 
+            {/* Botão Final */}
             <button
               onClick={() => {
                 // Tracking GA4 + Pixel
-                if (typeof window !== 'undefined' && (window as any).etapa8) {
-                  (window as any).etapa8();
+                if (typeof window !== 'undefined' && (window as any).etapa7) {
+                  (window as any).etapa7();
                 }
                 window.open('https://go.pepperpay.com.br/ft9lq', '_blank');
               }}
-              className="w-full p-2.5 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-violet-400/50 animate-pulse text-xs"
+              className="w-full py-4 px-6 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] border border-violet-400/50 animate-pulse"
             >
               🔓 Liberar Minha Revelação Completa por R$19,90
             </button>
 
             <div className="text-center">
-              <p className="text-purple-200 text-sm italic">
-                Você está a um passo de destravar sua Linha do Tempo Espiritual.
+              <p className="text-purple-200 text-xs italic">
+                Seu desbloqueio garante acesso à revelação completa e mostra como superar os bloqueios que hoje travam amor, prosperidade e equilíbrio.
               </p>
             </div>
           </div>
         );
+
+      case 8:
+        // Etapa 8 removida - agora termina na 7
+        return null;
 
       default:
         return null;
