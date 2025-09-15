@@ -148,10 +148,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                 ETAPA 1 – SEU MÊS DE NASCIMENTO
               </div>
 
-              <p className="text-center text-purple-100 text-xs leading-tight px-1">
-                O mês em que você nasceu abre o primeiro portal da sua vibração. Selecione e veja como isso marca seu destino.
-              </p>
-              <p className="text-center text-purple-100 text-base leading-tight px-1">
+              <p className="text-center text-purple-100 text-sm leading-tight px-1">
                 O mês em que você nasceu abre o primeiro portal da sua vibração. Selecione e veja como isso marca seu destino.
               </p>
             </div>
@@ -159,7 +156,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             {/* Micro-validação */}
             {showValidation && (
               <div className="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg p-3 border border-emerald-400/30 animate-fade-in">
-                <p className="text-emerald-200 text-center text-xs font-medium">
+                <p className="text-emerald-200 text-center text-sm font-medium">
                   {validationText}
                 </p>
               </div>
@@ -200,10 +197,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                 ETAPA 2 – SEU DIA DE NASCIMENTO
               </div>
 
-              <p className="text-center text-purple-100 text-xs leading-tight px-1">
-                O dia exato define seu número de vibração — ele pode atrair oportunidades ou bloquear ciclos. Escolha o seu dia para revelar.
-              </p>
-              <p className="text-center text-purple-100 text-base leading-tight px-1">
+              <p className="text-center text-purple-100 text-sm leading-tight px-1">
                 O dia exato define seu número de vibração — ele pode atrair oportunidades ou bloquear ciclos. Escolha o seu dia para revelar.
               </p>
             </div>
@@ -211,7 +205,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             {/* Micro-validação */}
             {showValidation && (
               <div className="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg p-3 border border-emerald-400/30 animate-fade-in">
-                <p className="text-emerald-200 text-center text-xs font-medium">
+                <p className="text-emerald-200 text-center text-sm font-medium">
                   {validationText}
                 </p>
               </div>
@@ -252,10 +246,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                 ETAPA 3 – SUA DÉCADA
               </div>
 
-              <p className="text-center text-purple-100 text-xs leading-tight px-1">
-                Cada década inicia um ciclo terreno. Selecionar sua década ajuda a localizar padrões que seguem se repetindo.
-              </p>
-              <p className="text-center text-purple-100 text-base leading-tight px-1">
+              <p className="text-center text-purple-100 text-sm leading-tight px-1">
                 Cada década inicia um ciclo terreno. Selecionar sua década ajuda a localizar padrões que seguem se repetindo.
               </p>
             </div>
@@ -263,7 +254,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             {/* Micro-validação */}
             {showValidation && (
               <div className="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg p-3 border border-emerald-400/30 animate-fade-in">
-                <p className="text-emerald-200 text-center text-xs font-medium">
+                <p className="text-emerald-200 text-center text-sm font-medium">
                   {validationText}
                 </p>
               </div>
@@ -309,10 +300,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                 ETAPA 4 – SEU ANO EXATO
               </div>
 
-              <p className="text-center text-purple-100 text-xs leading-tight px-1">
-                O ano de chegada guarda a chave do seu ponto de ruptura — quando a energia começou a se desalinhavar. Selecione para revelar.
-              </p>
-              <p className="text-center text-purple-100 text-base leading-tight px-1">
+              <p className="text-center text-purple-100 text-sm leading-tight px-1">
                 O ano de chegada guarda a chave do seu ponto de ruptura — quando a energia começou a se desalinhavar. Selecione para revelar.
               </p>
             </div>
@@ -320,7 +308,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             {/* Micro-validação */}
             {showValidation && (
               <div className="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg p-3 border border-emerald-400/30 animate-fade-in">
-                <p className="text-emerald-200 text-center text-xs font-medium">
+                <p className="text-emerald-200 text-center text-sm font-medium">
                   {validationText}
                 </p>
               </div>
@@ -386,10 +374,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                 ETAPA 5 - SEU PRIMEIRO NOME
               </div>
               
-              <p className="text-purple-100 text-xs px-1 leading-tight">
-                Seu primeiro nome é um selo energético. Ele guarda a vibração que ancora sua alma e revela porque você atrai certos padrões. Digite abaixo para desbloquear sua Linha Atual.
-              </p>
-              <p className="text-purple-100 text-base px-1 leading-tight">
+              <p className="text-purple-100 text-sm px-1 leading-tight">
                 Seu primeiro nome é um selo energético. Ele guarda a vibração que ancora sua alma e revela porque você atrai certos padrões. Digite abaixo para desbloquear sua Linha Atual.
               </p>
             </div>
@@ -443,19 +428,19 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               </h3>
               <div className="grid grid-cols-1 gap-1.5">
                 <div className="bg-white/5 rounded-lg p-1.5 backdrop-blur-sm">
-                  <p className="text-purple-100 text-xs text-center leading-tight">
+                  <p className="text-purple-100 text-sm text-center leading-tight">
                     <span className="text-amber-300 block text-xs mb-1">1️⃣</span>
                     Nome ancora Linha Espiritual
                   </p>
                 </div>
                 <div className="bg-white/5 rounded-lg p-1.5 backdrop-blur-sm">
-                  <p className="text-purple-100 text-xs text-center leading-tight">
+                  <p className="text-purple-100 text-sm text-center leading-tight">
                     <span className="text-amber-300 block text-xs mb-1">2️⃣</span>
                     Data localiza Ponto de Ruptura
                   </p>
                 </div>
                 <div className="bg-white/5 rounded-lg p-1.5 backdrop-blur-sm">
-                  <p className="text-purple-100 text-xs text-center leading-tight">
+                  <p className="text-purple-100 text-sm text-center leading-tight">
                     <span className="text-amber-300 block text-xs mb-1">3️⃣</span>
                     União revela Ciclo de Realinhamento
                   </p>
@@ -491,13 +476,13 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             <div className="space-y-2">
 
               <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-lg p-3 backdrop-blur-sm border border-violet-400/30">
-                <p className="text-purple-100 text-center text-xs leading-tight">
+                <p className="text-purple-100 text-center text-sm leading-tight">
                   Vejo que você tem uma sensibilidade rara e sente o que os outros sentem, mesmo em silêncio. Mas essa entrega exagerada fez você se perder no equilíbrio. É por isso que sente bloqueios no amor, desgaste nas finanças e até cansaço na alma.
                 </p>
               </div>
               
               <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-lg p-3 backdrop-blur-sm border border-red-400/30">
-                <p className="text-red-100 text-center text-xs leading-tight">
+                <p className="text-red-100 text-center text-sm leading-tight">
                   Essa é apenas uma parte da sua revelação — o restante está selado e só pode ser aberto com sua autorização energética.
                 </p>
               </div>
@@ -539,19 +524,19 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             <div className="space-y-2">
 
               <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-lg p-3 backdrop-blur-sm border border-violet-400/30">
-                <p className="text-purple-100 text-center text-xs leading-tight">
+                <p className="text-purple-100 text-center text-sm leading-tight">
                   O último fragmento da sua Linha do Tempo foi encontrado, mas ele está protegido. Se você não desbloquear agora, esse campo será selado e as respostas ficarão inacessíveis.
                 </p>
               </div>
               
               <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-lg p-3 backdrop-blur-sm border border-red-400/30">
-                <p className="text-red-100 text-center text-xs leading-tight">
+                <p className="text-red-100 text-center text-sm leading-tight">
                   ⚠️ Muitas pessoas deixam esse momento passar e continuam presas nos mesmos ciclos negativos. Por apenas <span className="text-amber-300 font-bold">R$19,90</span> você pode liberar tudo e finalmente entender como realinhar seu caminho.
                 </p>
               </div>
 
               <div className="bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg p-3 backdrop-blur-sm border border-emerald-400/30">
-                <p className="text-emerald-100 text-center text-xs leading-tight">
+                <p className="text-emerald-100 text-center text-sm leading-tight">
                   Ao liberar sua revelação, você receberá instruções claras para alinhar amor, prosperidade e equilíbrio ainda em 2025.
                 </p>
               </div>
@@ -576,7 +561,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             </button>
 
             <div className="text-center">
-              <p className="text-purple-200 text-xs italic">
+              <p className="text-purple-200 text-sm italic">
                 Você está a um passo de destravar sua Linha do Tempo Espiritual.
               </p>
             </div>
