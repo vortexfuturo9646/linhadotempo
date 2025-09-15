@@ -351,96 +351,132 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               </p>
             </div>
 
-            <div className="bg-white/5 rounded-lg p-2 mb-2 border border-violet-400/20">
-              <h3 className="text-purple-100 text-center font-medium mb-2 text-xs">
-                Dados da Sua Consulta
-              </h3>
-              <div className="grid grid-cols-1 gap-1.5">
-                <div className="bg-white/5 rounded-lg p-1.5 backdrop-blur-sm">
-                  <p className="text-purple-100 text-xs text-center leading-tight">
-                    <span className="text-amber-300 block font-medium">Data de Nascimento</span>
-                    {selectedDay} de {selectedMonth} de {selectedYear}
-                  </p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-1.5 backdrop-blur-sm">
-                  <p className="text-purple-100 text-xs text-center leading-tight">
-                    <span className="text-amber-300 block font-medium">Número do Dia</span>
-                    {selectedDay} → {selectedDay.toString().split('').reduce((a, b) => a + parseInt(b), 0)}
-                  </p>
-                </div>
-              </div>
-            </div>
-
+            {/* Título Principal */}
             <div className="text-center space-y-2">
-              <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-xs border border-amber-400/30 shadow-lg">
-                ETAPA 5 - SEU PRIMEIRO NOME
+              <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-sm border border-amber-400/30 shadow-lg">
+                DIGITE SEU PRIMEIRO NOME E VEJA QUAL É O SEU NÚMERO DA ALMA
               </div>
-              
-              <p className="text-purple-100 text-sm px-1 leading-tight">
-                Seu primeiro nome é um selo energético. Ele guarda a vibração que ancora sua alma e revela porque você atrai certos padrões. Digite abaixo para desbloquear sua Linha Atual.
-              </p>
             </div>
 
-            <div className="bg-white/5 rounded-lg p-2 space-y-2 border border-violet-400/20">
+            {/* Campo de Nome */}
+            <div className="bg-gradient-to-r from-violet-600/20 to-purple-600/20 rounded-xl p-4 backdrop-blur-md border border-violet-400/30 space-y-3">
               <div className="relative">
                 <input
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Digite seu primeiro nome..."
-                  className="w-full p-2.5 pl-8 rounded-lg bg-white/10 text-purple-100 placeholder-purple-300 backdrop-blur-sm border border-violet-400/30 focus:border-amber-400 focus:outline-none transition-all text-center text-sm"
+                  className="w-full p-4 rounded-xl bg-white/10 text-purple-100 placeholder-purple-300 backdrop-blur-sm border-2 border-violet-400/30 focus:border-amber-400 focus:outline-none transition-all text-center text-lg font-medium shadow-lg"
                 />
-                <div className="absolute inset-y-0 left-2 flex items-center pointer-events-none">
-                  <Sparkles className="text-violet-300" size={14} />
+                <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+                  <Sparkles className="text-violet-300 animate-pulse" size={20} />
                 </div>
               </div>
-
-              <button
-                onClick={() => {
-                  if (name.trim()) {
-                    // Tracking GA4 + Pixel
-                    if (typeof window !== 'undefined' && (window as any).etapa5) {
-                      (window as any).etapa5(name.trim());
-                    }
-                    setStep(6);
-                  }
-                }}
-                disabled={!name.trim()}
-                className={`w-full p-3 rounded-lg font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 ${
-                  name.trim()
-                    ? 'bg-gradient-to-r from-violet-600 to-purple-600 text-white hover:shadow-lg hover:shadow-violet-500/40 hover:scale-[1.02] border border-violet-400/50 animate-pulse'
-                    : 'bg-white/10 text-purple-300 cursor-not-allowed border border-violet-400/20'
-                }`}
-              >
-                <span className="text-sm">🔍 Continuar</span>
-                <span className="text-lg">✨</span>
-              </button>
             </div>
 
-            <div className="bg-white/5 rounded-lg p-2 border border-violet-400/20">
-              <h3 className="text-purple-100 text-center font-medium mb-2 text-xs">
-                A Ciência dos Números
+            {/* Área de Cálculo Animado */}
+            <div className="bg-gradient-to-br from-purple-600/20 to-indigo-600/20 rounded-xl p-4 backdrop-blur-md border border-purple-400/30 space-y-4">
+              <h3 className="text-center text-purple-100 font-semibold text-sm">
+                🔮 Calculando seu Número da Alma
               </h3>
-              <div className="grid grid-cols-1 gap-1.5">
-                <div className="bg-white/5 rounded-lg p-1.5 backdrop-blur-sm">
-                  <p className="text-purple-100 text-sm text-center leading-tight">
-                    <span className="text-amber-300 block text-xs mb-1">1️⃣</span>
-                    Nome ancora Linha Espiritual
-                  </p>
+              
+              {/* Caixas de Cálculo */}
+              <div className="flex items-center justify-center space-x-2">
+                {/* Mês */}
+                <div className="bg-violet-600/40 rounded-lg p-3 backdrop-blur-sm border border-violet-400/40 text-center min-w-[60px]">
+                  <div className="text-amber-300 text-xs font-medium mb-1">Mês</div>
+                  <div className="text-white font-bold text-sm">
+                    {months.indexOf(selectedMonth) + 1 || '?'}
+                  </div>
+                  <div className="text-purple-200 text-xs mt-1">
+                    = {months.indexOf(selectedMonth) + 1 > 9 
+                      ? Math.floor((months.indexOf(selectedMonth) + 1) / 10) + ((months.indexOf(selectedMonth) + 1) % 10)
+                      : months.indexOf(selectedMonth) + 1 || '?'}
+                  </div>
                 </div>
-                <div className="bg-white/5 rounded-lg p-1.5 backdrop-blur-sm">
-                  <p className="text-purple-100 text-sm text-center leading-tight">
-                    <span className="text-amber-300 block text-xs mb-1">2️⃣</span>
-                    Data localiza Ponto de Ruptura
-                  </p>
+                
+                {/* Seta */}
+                <div className="text-amber-300 text-lg animate-pulse">→</div>
+                
+                {/* Dia */}
+                <div className="bg-violet-600/40 rounded-lg p-3 backdrop-blur-sm border border-violet-400/40 text-center min-w-[60px]">
+                  <div className="text-amber-300 text-xs font-medium mb-1">Dia</div>
+                  <div className="text-white font-bold text-sm">
+                    {selectedDay || '?'}
+                  </div>
+                  <div className="text-purple-200 text-xs mt-1">
+                    = {selectedDay ? selectedDay.toString().split('').reduce((a, b) => a + parseInt(b), 0) : '?'}
+                  </div>
                 </div>
-                <div className="bg-white/5 rounded-lg p-1.5 backdrop-blur-sm">
-                  <p className="text-purple-100 text-sm text-center leading-tight">
-                    <span className="text-amber-300 block text-xs mb-1">3️⃣</span>
-                    União revela Ciclo de Realinhamento
-                  </p>
+                
+                {/* Seta */}
+                <div className="text-amber-300 text-lg animate-pulse">→</div>
+                
+                {/* Ano */}
+                <div className="bg-violet-600/40 rounded-lg p-3 backdrop-blur-sm border border-violet-400/40 text-center min-w-[60px]">
+                  <div className="text-amber-300 text-xs font-medium mb-1">Ano</div>
+                  <div className="text-white font-bold text-sm">
+                    {selectedYear || '?'}
+                  </div>
+                  <div className="text-purple-200 text-xs mt-1">
+                    = {selectedYear ? selectedYear.toString().split('').reduce((a, b) => a + parseInt(b), 0) : '?'}
+                  </div>
                 </div>
               </div>
+              
+              {/* Resultado Final */}
+              {selectedMonth && selectedDay && selectedYear && (
+                <div className="flex flex-col items-center space-y-2">
+                  <div className="text-amber-300 text-sm animate-pulse">↓</div>
+                  <div className="bg-gradient-to-r from-amber-400/30 to-yellow-400/30 rounded-xl p-4 backdrop-blur-md border-2 border-amber-400/50 shadow-lg shadow-amber-400/20">
+                    <div className="text-center">
+                      <div className="text-amber-300 text-xs font-medium mb-2">SEU NÚMERO DA ALMA</div>
+                      <div className="text-4xl font-bold text-white animate-pulse drop-shadow-lg">
+                        {(() => {
+                          const monthSum = months.indexOf(selectedMonth) + 1 > 9 
+                            ? Math.floor((months.indexOf(selectedMonth) + 1) / 10) + ((months.indexOf(selectedMonth) + 1) % 10)
+                            : months.indexOf(selectedMonth) + 1;
+                          const daySum = selectedDay.toString().split('').reduce((a, b) => a + parseInt(b), 0);
+                          const yearSum = selectedYear.toString().split('').reduce((a, b) => a + parseInt(b), 0);
+                          const total = monthSum + daySum + yearSum;
+                          return total > 9 ? Math.floor(total / 10) + (total % 10) : total;
+                        })()}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Botão CTA */}
+            <button
+              onClick={() => {
+                if (name.trim()) {
+                  // Tracking GA4 + Pixel
+                  if (typeof window !== 'undefined' && (window as any).etapa5) {
+                    (window as any).etapa5(name.trim());
+                  }
+                  setStep(6);
+                }
+              }}
+              disabled={!name.trim()}
+              className={`w-full py-4 px-6 rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3 ${
+                name.trim()
+                  ? 'bg-gradient-to-r from-violet-600 to-purple-600 text-white hover:shadow-xl hover:shadow-violet-500/50 hover:scale-[1.02] border-2 border-violet-400/50 animate-pulse shadow-lg'
+                  : 'bg-white/10 text-purple-300 cursor-not-allowed border border-violet-400/20'
+              }`}
+            >
+              <span>👉 Clique aqui para continuar</span>
+              <Sparkles className="animate-spin" size={20} />
+            </button>
+
+            {/* Números Flutuantes de Fundo */}
+            <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-xl">
+              <div className="absolute top-2 left-4 text-purple-300/20 text-2xl animate-pulse">3</div>
+              <div className="absolute top-8 right-6 text-amber-300/20 text-lg animate-bounce">7</div>
+              <div className="absolute bottom-4 left-8 text-violet-300/20 text-xl animate-pulse">9</div>
+              <div className="absolute bottom-8 right-4 text-purple-300/20 text-lg animate-bounce">1</div>
+              <div className="absolute top-1/2 left-2 text-amber-300/20 text-sm animate-pulse">5</div>
             </div>
           </div>
         );
