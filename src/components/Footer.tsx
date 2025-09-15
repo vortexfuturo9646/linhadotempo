@@ -37,9 +37,6 @@ const Footer: React.FC = () => {
           <p className="text-purple-100 font-medium text-sm">
             © 2025 Vortex Futuro.
           </p>
-          <p className="text-purple-100 font-medium text-xs md:text-sm">
-            Todos os direitos reservados.
-          </p>
         </div>
       </div>
     </footer>
