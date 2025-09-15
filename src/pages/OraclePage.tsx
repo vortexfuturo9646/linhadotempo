@@ -458,6 +458,11 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
           'Senti dispersões recentes drenando sua força. Precisamos selar cortes energéticos para fechar essa porta.'
         ];
 
+        const cardImages = [
+          'http://vortexfuturo.com.br/wp-content/uploads/2025/09/dois-de-espadas.webp',
+          'http://vortexfuturo.com.br/wp-content/uploads/2025/09/cinco-de-ouros.webp',
+          'http://vortexfuturo.com.br/wp-content/uploads/2025/09/A-torre-1.webp'
+        ];
         return (
           <div className="bg-slate-900/70 backdrop-blur-md rounded-xl p-3 space-y-3 border border-violet-500/20 shadow-2xl shadow-violet-500/10">
             {/* Indicador de Progresso */}
@@ -494,19 +499,30 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                         : 'bg-gradient-to-br from-purple-600/30 to-indigo-600/30 border-violet-400/40 hover:border-amber-400/50 hover:scale-105'
                     }`}
                   >
-                    <div className="w-full h-full flex flex-col items-center justify-center p-2">
+                    <div className="w-full h-full relative">
                       {selectedCard === cardIndex ? (
-                        <div className="text-center space-y-1">
-                          <div className="text-amber-300 text-lg">🔮</div>
-                          <p className="text-amber-300 font-bold text-xs leading-tight">
-                            {cardTitles[cardIndex]}
-                          </p>
+                        <div className="w-full h-full relative">
+                          <img 
+                            src={cardImages[cardIndex]} 
+                            alt={cardTitles[cardIndex]}
+                            className="w-full h-full object-cover rounded-md"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-md"></div>
+                          <div className="absolute bottom-1 left-1 right-1">
+                            <p className="text-amber-300 font-bold text-xs leading-tight text-center drop-shadow-lg">
+                              {cardTitles[cardIndex]}
+                            </p>
+                          </div>
                         </div>
                       ) : (
-                        <div className="text-center space-y-2">
-                          <div className="text-violet-300 text-2xl">🃏</div>
-                          <div className="w-full h-8 bg-gradient-to-r from-purple-500/20 to-violet-500/20 rounded border border-violet-400/30"></div>
-                          <div className="w-3/4 h-2 bg-gradient-to-r from-purple-500/20 to-violet-500/20 rounded border border-violet-400/30 mx-auto"></div>
+                        <div className="w-full h-full bg-gradient-to-br from-purple-600/30 to-indigo-600/30 flex flex-col items-center justify-center p-2 relative">
+                          <div className="absolute inset-2 border-2 border-dashed border-violet-400/30 rounded-md"></div>
+                          <div className="text-violet-300 text-3xl mb-2">🃏</div>
+                          <div className="w-full space-y-1">
+                            <div className="w-full h-2 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded"></div>
+                            <div className="w-3/4 h-2 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded mx-auto"></div>
+                            <div className="w-1/2 h-2 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded mx-auto"></div>
+                          </div>
                         </div>
                       )}
                     </div>
