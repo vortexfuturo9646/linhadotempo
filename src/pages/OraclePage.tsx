@@ -151,7 +151,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               <p className="text-center text-purple-100 text-xs leading-tight px-1">
                 O mês em que você nasceu abre o primeiro portal da sua vibração. Selecione e veja como isso marca seu destino.
               </p>
-              <p className="text-center text-purple-100 text-sm leading-tight px-1">
+              <p className="text-center text-purple-100 text-base leading-tight px-1">
                 O mês em que você nasceu abre o primeiro portal da sua vibração. Selecione e veja como isso marca seu destino.
               </p>
             </div>
@@ -203,7 +203,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               <p className="text-center text-purple-100 text-xs leading-tight px-1">
                 O dia exato define seu número de vibração — ele pode atrair oportunidades ou bloquear ciclos. Escolha o seu dia para revelar.
               </p>
-              <p className="text-center text-purple-100 text-sm leading-tight px-1">
+              <p className="text-center text-purple-100 text-base leading-tight px-1">
                 O dia exato define seu número de vibração — ele pode atrair oportunidades ou bloquear ciclos. Escolha o seu dia para revelar.
               </p>
             </div>
@@ -255,7 +255,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               <p className="text-center text-purple-100 text-xs leading-tight px-1">
                 Cada década inicia um ciclo terreno. Selecionar sua década ajuda a localizar padrões que seguem se repetindo.
               </p>
-              <p className="text-center text-purple-100 text-sm leading-tight px-1">
+              <p className="text-center text-purple-100 text-base leading-tight px-1">
                 Cada década inicia um ciclo terreno. Selecionar sua década ajuda a localizar padrões que seguem se repetindo.
               </p>
             </div>
@@ -312,7 +312,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               <p className="text-center text-purple-100 text-xs leading-tight px-1">
                 O ano de chegada guarda a chave do seu ponto de ruptura — quando a energia começou a se desalinhavar. Selecione para revelar.
               </p>
-              <p className="text-center text-purple-100 text-sm leading-tight px-1">
+              <p className="text-center text-purple-100 text-base leading-tight px-1">
                 O ano de chegada guarda a chave do seu ponto de ruptura — quando a energia começou a se desalinhavar. Selecione para revelar.
               </p>
             </div>
@@ -389,7 +389,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
               <p className="text-purple-100 text-xs px-1 leading-tight">
                 Seu primeiro nome é um selo energético. Ele guarda a vibração que ancora sua alma e revela porque você atrai certos padrões. Digite abaixo para desbloquear sua Linha Atual.
               </p>
-              <p className="text-purple-100 text-sm px-1 leading-tight">
+              <p className="text-purple-100 text-base px-1 leading-tight">
                 Seu primeiro nome é um selo energético. Ele guarda a vibração que ancora sua alma e revela porque você atrai certos padrões. Digite abaixo para desbloquear sua Linha Atual.
               </p>
             </div>
