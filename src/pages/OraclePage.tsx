@@ -126,7 +126,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                   🔮 Começar Revelação
                 </button>
                 <p className="text-purple-200 text-sm italic">
-                  Sem custo nesta etapa. Leva menos de 2 minutos.
+                  Leva menos de 2 minutos.
                 </p>
               </div>
             </div>
