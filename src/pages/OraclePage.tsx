@@ -509,91 +509,57 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             </div>
 
             <div className="bg-gradient-to-r from-amber-400/20 to-yellow-400/20 text-amber-100 py-2 px-2 rounded-lg text-center font-medium text-sm border border-amber-400/30 shadow-lg">
-              ESCOLHA O PORTAL QUE VAI TE RESPONDER AGORA
+              AS CARTAS QUE SAÍRAM PARA VOCÊ
             </div>
 
             <p className="text-center text-purple-100 text-base leading-tight px-1">
-              Três cartas foram seladas para você. Cada uma aponta o portal onde está o seu maior bloqueio do momento.
+              Três cartas foram reveladas para você. Cada uma aponta um portal onde está o seu maior bloqueio do momento.
             </p>
 
             {/* Cards Section */}
-            <div className="grid grid-cols-1 gap-4 max-w-xs mx-auto">
+            <div className="grid grid-cols-1 gap-3 max-w-xs mx-auto">
               {[0, 1, 2].map((cardIndex) => (
-                <div key={cardIndex} className="flex flex-col items-center space-y-3">
-                  <button
-                    onClick={() => {
-                      setSelectedCard(cardIndex);
-                      setShowCardReveal(true);
-                      // Tocar efeito sonoro
-                      if ((window as any).playSpiritualEffect) {
-                        (window as any).playSpiritualEffect('revelation');
-                      }
-                    }}
-                    className={`w-full h-48 rounded-lg backdrop-blur-sm transition-all duration-500 border-2 ${
-                      selectedCard === cardIndex
-                        ? 'bg-gradient-to-br from-amber-400/30 to-violet-500/30 border-amber-400/60 shadow-lg shadow-amber-400/30 scale-105'
-                        : 'bg-gradient-to-br from-purple-600/30 to-indigo-600/30 border-violet-400/40 hover:border-amber-400/50 hover:scale-105'
-                    }`}
-                  >
+                <div key={cardIndex} className="flex flex-col items-center space-y-2">
+                  <div className="w-full h-40 rounded-lg backdrop-blur-sm transition-all duration-500 border-2 bg-gradient-to-br from-amber-400/30 to-violet-500/30 border-amber-400/60 shadow-lg shadow-amber-400/30">
                     <div className="w-full h-full relative">
-                      {selectedCard === cardIndex ? (
-                        <div className="w-full h-full relative">
-                          <img 
-                            src={cardImages[cardIndex]} 
-                            alt={cardTitles[cardIndex]}
-                            className="w-full h-full object-cover rounded-md"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-md"></div>
-                          <div className="absolute bottom-2 left-2 right-2">
-                            <p className="text-amber-300 font-bold text-sm leading-tight text-center drop-shadow-lg">
-                              {cardTitles[cardIndex]}
-                            </p>
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="w-full h-full bg-gradient-to-br from-purple-600/30 to-indigo-600/30 flex flex-col items-center justify-center p-4 relative">
-                          <div className="absolute inset-3 border-2 border-dashed border-violet-400/30 rounded-md"></div>
-                          <div className="text-violet-300 text-5xl mb-4">🃏</div>
-                          <div className="w-full space-y-2">
-                            <div className="w-full h-3 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded"></div>
-                            <div className="w-3/4 h-3 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded mx-auto"></div>
-                            <div className="w-1/2 h-3 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded mx-auto"></div>
-                          </div>
-                        </div>
-                      )}
+                      <img 
+                        src={cardImages[cardIndex]} 
+                        alt={cardTitles[cardIndex]}
+                        className="w-full h-full object-cover rounded-md"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-md"></div>
+                      <div className="absolute bottom-2 left-2 right-2">
+                        <p className="text-amber-300 font-bold text-xs leading-tight text-center drop-shadow-lg">
+                          {cardTitles[cardIndex]}
+                        </p>
+                      </div>
                     </div>
-                  </button>
-                  <p className="text-purple-200 text-sm font-medium text-center">
+                  </div>
+                  <p className="text-purple-200 text-xs font-medium text-center">
                     {cardTitles[cardIndex]}
                   </p>
+                  <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-lg p-2 backdrop-blur-sm border border-violet-400/30 w-full">
+                    <p className="text-purple-100 text-center text-xs leading-tight">
+                      {cardRevelations[cardIndex]}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
 
-            {/* Card Revelation */}
-            {showCardReveal && selectedCard !== null && (
-              <div className="bg-gradient-to-r from-violet-600/30 to-purple-600/30 rounded-lg p-3 backdrop-blur-sm border border-violet-400/30 animate-fade-in">
-                <p className="text-purple-100 text-center text-sm leading-tight">
-                  {cardRevelations[selectedCard]}
-                </p>
-              </div>
-            )}
-
-            {/* Continue Button */}
-            {showCardReveal && (
-              <button
-                onClick={() => {
-                  // Tracking GA4 + Pixel
-                  if (typeof window !== 'undefined' && (window as any).etapa6) {
-                    (window as any).etapa6();
-                  }
-                  setStep(7);
-                }}
-                className="w-full p-2.5 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-violet-400/50 text-sm animate-fade-in"
-              >
-                🔮 Prosseguir com a Revelação
-              </button>
-            )}
+            {/* Continue Button - Always Visible */}
+            <button
+              onClick={() => {
+                // Tracking GA4 + Pixel
+                if (typeof window !== 'undefined' && (window as any).etapa6) {
+                  (window as any).etapa6();
+                }
+                setStep(7);
+              }}
+              className="w-full p-2.5 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 border border-violet-400/50 text-sm"
+            >
+              🔮 Prosseguir com a Revelação
+            </button>
           </div>
         );
 
