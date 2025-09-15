@@ -481,9 +481,9 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
             </p>
 
             {/* Cards Section */}
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 gap-4 max-w-xs mx-auto">
               {[0, 1, 2].map((cardIndex) => (
-                <div key={cardIndex} className="flex flex-col items-center space-y-2">
+                <div key={cardIndex} className="flex flex-col items-center space-y-3">
                   <button
                     onClick={() => {
                       setSelectedCard(cardIndex);
@@ -493,7 +493,7 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                         (window as any).playSpiritualEffect('revelation');
                       }
                     }}
-                    className={`w-full aspect-[3/4] rounded-lg backdrop-blur-sm transition-all duration-500 border-2 ${
+                    className={`w-full h-48 rounded-lg backdrop-blur-sm transition-all duration-500 border-2 ${
                       selectedCard === cardIndex
                         ? 'bg-gradient-to-br from-amber-400/30 to-violet-500/30 border-amber-400/60 shadow-lg shadow-amber-400/30 scale-105'
                         : 'bg-gradient-to-br from-purple-600/30 to-indigo-600/30 border-violet-400/40 hover:border-amber-400/50 hover:scale-105'
@@ -508,25 +508,28 @@ const OraclePage: React.FC<OraclePageProps> = ({ navigate }) => {
                             className="w-full h-full object-cover rounded-md"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-md"></div>
-                          <div className="absolute bottom-1 left-1 right-1">
-                            <p className="text-amber-300 font-bold text-xs leading-tight text-center drop-shadow-lg">
+                          <div className="absolute bottom-2 left-2 right-2">
+                            <p className="text-amber-300 font-bold text-sm leading-tight text-center drop-shadow-lg">
                               {cardTitles[cardIndex]}
                             </p>
                           </div>
                         </div>
                       ) : (
-                        <div className="w-full h-full bg-gradient-to-br from-purple-600/30 to-indigo-600/30 flex flex-col items-center justify-center p-2 relative">
-                          <div className="absolute inset-2 border-2 border-dashed border-violet-400/30 rounded-md"></div>
-                          <div className="text-violet-300 text-3xl mb-2">🃏</div>
-                          <div className="w-full space-y-1">
-                            <div className="w-full h-2 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded"></div>
-                            <div className="w-3/4 h-2 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded mx-auto"></div>
-                            <div className="w-1/2 h-2 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded mx-auto"></div>
+                        <div className="w-full h-full bg-gradient-to-br from-purple-600/30 to-indigo-600/30 flex flex-col items-center justify-center p-4 relative">
+                          <div className="absolute inset-3 border-2 border-dashed border-violet-400/30 rounded-md"></div>
+                          <div className="text-violet-300 text-5xl mb-4">🃏</div>
+                          <div className="w-full space-y-2">
+                            <div className="w-full h-3 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded"></div>
+                            <div className="w-3/4 h-3 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded mx-auto"></div>
+                            <div className="w-1/2 h-3 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded mx-auto"></div>
                           </div>
                         </div>
                       )}
                     </div>
                   </button>
+                  <p className="text-purple-200 text-sm font-medium text-center">
+                    {cardTitles[cardIndex]}
+                  </p>
                 </div>
               ))}
             </div>
